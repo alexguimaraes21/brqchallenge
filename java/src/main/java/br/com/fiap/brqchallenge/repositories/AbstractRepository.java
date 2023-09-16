@@ -3,23 +3,37 @@ package br.com.fiap.brqchallenge.repositories;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 
-public abstract class AbstractRepository<T> implements BasicOperation {
+public abstract class AbstractRepository<T> implements BasicOperation<T> {
 
-    private List<Object> objects;
+    private List<T> objects;
 
     @Override
-    public void cadastrar(Object o) {
+    public void cadastrar(T o) {
         this.objects.add(o);
     }
 
     @Override
-    public void editar(long id, Object o) throws NoSuchFieldException {
-
+    public Optional<T> buscarPorId(Predicate<T> predicate) {
+        T t = this.objects.stream().filter(predicate).findFirst().orElse(null);
+        if (null != t) {
+            return Optional.of(t);
+        } else {
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional detalhes(long id) {
-        return Optional.empty();
+    public List<T> buscarTodos() {
+        return this.objects;
+    }
+
+    @Override
+    public void atualizar(Predicate<T> predicate, T t) {
+        T o = this.objects.stream().filter(predicate).findFirst().orElse(null);
+        if (null != o) {
+            o = t;
+        }
     }
 }

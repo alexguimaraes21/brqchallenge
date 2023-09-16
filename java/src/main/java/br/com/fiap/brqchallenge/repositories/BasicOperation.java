@@ -1,10 +1,13 @@
 package br.com.fiap.brqchallenge.repositories;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 public interface BasicOperation<T> {
 
 	void cadastrar(T t);
-	void editar(long id, T t) throws NoSuchFieldException;
-	Optional<T> detalhes(long id);
+	Optional<T> buscarPorId(Predicate<T> predicate);
+	List<T> buscarTodos();
+	void atualizar(Predicate<T> predicate, T t);
 }
