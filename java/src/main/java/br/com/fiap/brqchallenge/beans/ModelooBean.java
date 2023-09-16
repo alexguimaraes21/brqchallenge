@@ -1,22 +1,23 @@
 package br.com.fiap.brqchallenge.beans;
 
+import br.com.fiap.brqchallenge.enums.EnumCategoriaModeloVeiculo;
+import br.com.fiap.brqchallenge.enums.EnumTipoCombustivel;
 import br.com.fiap.brqchallenge.models.Acessorio;
+import br.com.fiap.brqchallenge.models.Modelo;
 import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
+import br.com.fiap.brqchallenge.repositories.ModeloRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class AcessorioBean {
+public class ModelooBean {
 
-    public void cadastrar(String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
-        AcessorioRepository acessorioRepository = new AcessorioRepository();
-        Acessorio acessorio = new Acessorio();
-        acessorio.setNmAcessorio(nmAcessorio);
-        acessorio.setDsAcessorio(dsAcessorio);
-        acessorio.setVlAcessorioHora(vlAcessorioHora);
-        acessorio.setVlAcessorioDiaria(vlAcessorioDiaria);
-        acessorio.setVlAcessorioMensal(vlAcessorioMensal);
-        acessorioRepository.cadastrar(acessorio);
+    public void cadastrar(String nmModelo, String nmCor, int nrPortas, String dsPlaca, String dsRenavam, String dsChassi,
+                          String nmPaisOrigem, String marca, EnumCategoriaModeloVeiculo categoria, EnumTipoCombustivel combustivel,
+                          double vlAluguelHora, double vlAluguelDiaria, double vlAluguelMensal) {
+        ModeloRepository modeloRepository = new ModeloRepository();
+        Modelo modelo = new Modelo();
+
     }
 
     public Optional<Acessorio> buscarPorId(long id) {

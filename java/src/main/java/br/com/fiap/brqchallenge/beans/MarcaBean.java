@@ -6,7 +6,7 @@ import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class AcessorioBean {
+public class MarcaBean {
 
     public void cadastrar(String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
         AcessorioRepository acessorioRepository = new AcessorioRepository();
