@@ -2,7 +2,7 @@ package br.com.fiap.brqchallenge.models;
 
 import java.time.LocalDateTime;
 
-public abstract class AbstractEntity {
+public abstract class AbstractModel {
 
 	protected long id;
 

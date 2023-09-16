@@ -4,7 +4,7 @@ import br.com.fiap.brqchallenge.enums.EnumTipoPessoa;
 
 import java.util.List;
 
-public class Pessoa extends AbstractEntity {
+public class Pessoa extends AbstractModel {
 
 	private String nmPessoa;
 	private EnumTipoPessoa tipoPessoa;

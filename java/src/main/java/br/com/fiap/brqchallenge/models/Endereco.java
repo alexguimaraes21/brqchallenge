@@ -3,7 +3,7 @@ package br.com.fiap.brqchallenge.models;
 import br.com.fiap.brqchallenge.enums.EnumTipoEstado;
 import br.com.fiap.brqchallenge.enums.EnumTipoLogradouro;
 
-public class Endereco extends AbstractEntity {
+public class Endereco extends AbstractModel {
     private String nmLogradouro;
     private EnumTipoLogradouro tipoLogradouro;
     private Integer nrLogradouro;

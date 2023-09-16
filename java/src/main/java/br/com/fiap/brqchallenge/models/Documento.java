@@ -3,7 +3,7 @@ package br.com.fiap.brqchallenge.models;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Documento extends AbstractEntity {
+public class Documento extends AbstractModel {
 
     private String dsDocumento;
     private String nrDocumento;

@@ -2,7 +2,7 @@ package br.com.fiap.brqchallenge.models;
 
 import br.com.fiap.brqchallenge.enums.EnumTipoTelefone;
 
-public class Telefone extends AbstractEntity {
+public class Telefone extends AbstractModel {
 
     private String nrTelefone;
     private String nrDdd;
