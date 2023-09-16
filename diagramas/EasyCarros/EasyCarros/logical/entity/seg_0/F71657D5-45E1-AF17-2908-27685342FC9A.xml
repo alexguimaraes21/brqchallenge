@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F71657D5-45E1-AF17-2908-27685342FC9A" name="T_TIPO_LOCACAO">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:13:06 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_tipo_locacao" id="A6F8BC18-D09F-FF96-46D9-B5A13D82700E">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:13:16 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_locacao" id="71E2BD85-88DA-AE8B-CA33-2E18F2CD7FEB">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:13:25 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B4B67D92-4CF1-442C-C944-BC0C3CFEFB49" name="T_TIPO_LOCACAO PK">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:13:24 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A6F8BC18-D09F-FF96-46D9-B5A13D82700E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

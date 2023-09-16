@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A4D3E27E-DD22-771B-5419-609E093EEBA8" containerWithKeyObject="A72C00F3-A19A-2525-8BF6-AB68235AD8A7" localFKIndex="21BBD471-5E33-0E5D-01D5-8D2B23896AE0" name="T_LOC_T_FORM_PAG_FK">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 22:38:57 UTC</createdTime>
+<generatorID>08F80B1F-D78B-8E55-ACC8-00F9579B2464</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<referredTableLongName>T_FORMA_PAGAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>237E9902-6980-3BAA-2262-1996CEB9FA6B</referredTableID>
+<keyObject>CF20F01B-8039-2917-F6F1-59BAB67A3069</keyObject>
+<referredKeyID>CF20F01B-8039-2917-F6F1-59BAB67A3069</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_forma_pagamento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

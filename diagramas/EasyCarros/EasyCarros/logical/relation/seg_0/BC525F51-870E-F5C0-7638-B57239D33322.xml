@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REL_T_DOCUMENTO_T_PESSOA" directorySegmentName="seg_0" id="BC525F51-870E-F5C0-7638-B57239D33322">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-17 23:26:10 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<sourcePk>40B49056-9E78-B951-790A-0EF1F02C4926</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AC706527-2BBD-DE85-3C50-63359B67D0C5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DA4DA8EF-F222-B727-D12E-13D95A05CFDA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

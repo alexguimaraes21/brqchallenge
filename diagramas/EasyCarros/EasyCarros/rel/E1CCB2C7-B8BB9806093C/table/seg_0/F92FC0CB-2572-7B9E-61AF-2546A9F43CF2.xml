@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F92FC0CB-2572-7B9E-61AF-2546A9F43CF2" name="T_IMAGEM">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:17:33 UTC</createdTime>
+<generatorID>52A99454-285B-2B3E-E29E-90BE49289AD2</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_imagem" id="05FFC739-5955-F6FD-5177-90596400236B">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:17:33 UTC</createdTime>
+<generatorID>2D051AE7-EC1F-8952-6263-201A56D66CA6</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_imagem" id="87BB5182-2E71-93EB-FD6A-C6A2485D18F9">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:17:33 UTC</createdTime>
+<generatorID>C90639C9-29F8-5F04-808E-0A5520F9F0CF</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_tamanho_arquivo_imagem" id="042C314C-ED01-C7F6-B81C-3C13DEB0741E">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:17:33 UTC</createdTime>
+<generatorID>D06E2096-7A5E-2691-ED10-368F64FBFC09</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="275B9CBD-4E4B-573A-D6AE-69EA4BBA2BCC" name="T_IMAGEM_PK">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:17:33 UTC</createdTime>
+<generatorID>7B1FBCB3-CC29-EF8F-37F2-130DE5B57BC8</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05FFC739-5955-F6FD-5177-90596400236B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

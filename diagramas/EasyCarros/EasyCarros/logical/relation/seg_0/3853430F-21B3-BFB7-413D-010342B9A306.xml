@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REL_T_MODELO_T_MARCA" directorySegmentName="seg_0" id="3853430F-21B3-BFB7-413D-010342B9A306">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-18 00:03:58 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<sourcePk>B846A431-00F5-088D-63F2-4159C2F6AF51</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>09A4DB53-B20B-5BA0-0497-791F07C57B22</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>923DF97F-96CC-80A5-F25A-4B6A4AC7CDFE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

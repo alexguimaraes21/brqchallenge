@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REL_T_ENDERECO_T_TIPO_ENDERECO" directorySegmentName="seg_0" id="6C24D938-D4D7-D41A-38F2-E769E52E740C">
+<createdBy>alex</createdBy>
+<createdTime>2023-05-17 23:47:36 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<sourcePk>F4B00455-95D1-C2A1-006A-93B21FE632B0</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E714326E-791B-B6E9-8210-245F0F0A111F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>62BEE390-7F89-A33D-CC91-DB576384251C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
