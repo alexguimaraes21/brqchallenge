@@ -35,4 +35,6 @@ public abstract class AbstractRepository<T> implements BasicOperation<T> {
             o = t;
         }
     }
+
+    public abstract long getId();
 }

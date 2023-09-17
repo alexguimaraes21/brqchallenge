@@ -2,11 +2,20 @@ package br.com.fiap.brqchallenge.models;
 
 import br.com.fiap.brqchallenge.enums.EnumTipoTelefone;
 
-public class Telefone extends AbstractModel {
+public class Telefone {
 
+    private long id;
     private String nrTelefone;
     private String nrDdd;
     private EnumTipoTelefone tipoTelefone;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getNrTelefone() {
         return nrTelefone;

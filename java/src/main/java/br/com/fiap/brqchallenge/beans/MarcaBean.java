@@ -2,11 +2,18 @@ package br.com.fiap.brqchallenge.beans;
 
 import br.com.fiap.brqchallenge.models.Acessorio;
 import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
+import br.com.fiap.brqchallenge.repositories.MarcaRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MarcaBean {
+
+    MarcaRepository marcaRepository;
+
+    public MarcaBean(MarcaRepository repository) {
+        this.marcaRepository = repository;
+    }
 
     public void cadastrar(String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
         AcessorioRepository acessorioRepository = new AcessorioRepository();

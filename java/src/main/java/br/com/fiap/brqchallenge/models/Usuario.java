@@ -1,28 +1,23 @@
 package br.com.fiap.brqchallenge.models;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Optional;
 
 public class Usuario {
 
 	private long id;
-
 	private String dsEmail;
-
 	private String dsSenha;
-
 	private LocalDateTime dtHrUltimaAtualizacao;
-
 	private LocalDateTime dtHrUltimoLogin;
-
 	private LocalDateTime dtHrCadastro;
-
 	private boolean ckAtivado;
-
 	private Pessoa pessoa;
 
 	public Usuario() {
 		this.ckAtivado = true;
+		this.dtHrCadastro = LocalDateTime.now(ZoneId.systemDefault());
 	}
 
 	public long getId() {

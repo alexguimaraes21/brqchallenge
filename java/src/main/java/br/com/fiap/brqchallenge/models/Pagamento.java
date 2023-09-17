@@ -5,6 +5,7 @@ import br.com.fiap.brqchallenge.enums.EnumTipoPagamento;
 
 public class Pagamento {
 
+    private long id;
     private Pessoa pessoa;
     private double vlLocacao;
     private double vlDesconto;
@@ -12,6 +13,14 @@ public class Pagamento {
     private String nrCartao;
     private String nmBandeiraCartao;
     private EnumTipoCartao tipoCartao;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public Pessoa getPessoa() {
         return pessoa;

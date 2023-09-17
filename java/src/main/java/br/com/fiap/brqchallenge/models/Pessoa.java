@@ -4,11 +4,20 @@ import br.com.fiap.brqchallenge.enums.EnumTipoPessoa;
 
 import java.util.List;
 
-public class Pessoa extends AbstractModel {
+public class Pessoa {
 
+	private long id;
 	private String nmPessoa;
 	private EnumTipoPessoa tipoPessoa;
 	private List<Telefone> telefones;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getNmPessoa() {
 		return nmPessoa;
