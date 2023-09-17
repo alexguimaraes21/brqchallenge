@@ -1,0 +1,138 @@
+/* --------------------------------- SCROL BAR --------------------------------- */
+body::-webkit-scrollbar {
+    width: 14px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+background: var(--ec-blue03);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: var(--ec-blue01);    /* color of the scroll thumb */
+border-radius: 20px;       /* roundness of the scroll thumb */
+border: 3px solid white;  /* creates padding around scroll thumb */
+}
+
+
+
+/* ---------------------------------- GENERAL ---------------------------------- */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+
+.bg-blue {
+    background-color: var(--ec-blue01);
+    color: #fff;
+}
+
+.bg-blue-menu {
+    background-color: var(--ec-blue01);
+    color: #fff;
+    border-width: 0px;
+}
+
+.bg-blue-menu:hover {
+    background-color: var(--ec-blue01);
+}
+
+
+
+/* --------------------------------- LEFT MENU --------------------------------- */
+.main-container {
+    display: flex;
+}
+
+.menu-easycarros {
+    background-color: var(--ec-blue01);
+    color: #fff;
+    width: 100%;
+    max-width: 260px;
+    min-width: 240px;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+
+}
+
+.logo {
+    margin-top: 2rem;
+    padding-inline: 3rem;
+}
+
+.menu-content {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+.menu-icon {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.item-container {
+    width: 100%;
+    max-width: 240px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+.item-active {
+    background-color: var(--ec-blue02);
+    color: #fff;
+}
+
+.item-inactive:hover {
+    background-color: var(--ec-blue02);
+
+}
+
+.divider {
+    width: 100%;
+    max-width: 180px;
+    height: 1px;
+    background-color: #ffffff6b;
+    margin: 2rem auto;
+    
+}
+
+.menu-btn {
+    color: #fff;
+    background-color: #4e7aca;
+    width: 100%;
+    max-width: 220px;
+    padding: .6rem;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.menu-btn:hover {
+    background-color: #6f96dd;
+}
+
+
+
+/* --------------------------------- CONTENT BLOCK --------------------------------- */
+
+.content-block {
+
+    padding: 2rem;
+    background-color: #fff;
+}
