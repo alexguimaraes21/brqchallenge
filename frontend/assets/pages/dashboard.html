@@ -143,9 +143,7 @@
                             <h3 class="db-ac-title">
                                 Carros disponíveis
                             </h3>
-
                             <div class="db-ac-content">
-
                                 <div class="flex-column m-1">
                                     <label class="db-available-cars my-3">
                                         <img src="../images/icons/icon-car.svg" alt="car icon">
@@ -156,7 +154,6 @@
                                             <option value="3">1755</option>
                                         </select>
                                     </label>
-    
                                     <div class="my-3" >
                                         <div class="input-group">
                                             <label class="db-available-cars">
@@ -174,14 +171,73 @@
                                 <button type="submit" class=" btn bg-blue p-3 check-btn">
                                     Check
                                 </button>
-
-
-
                             </div>
+                        </div>
 
-
-
-                            
+                        <div class="db-status-table my-5">
+                            <h2>Status dos aluguéis</h2>
+                            <table class="table align-middle">
+                                <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">No. Carro</th>
+                                    <th scope="col" class="driver">Motorista</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Aluguel</th>
+                                    <th scope="col"> </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">01</th>
+                                    <td><div class="car-id">6465</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-01.svg" alt="driver avatar">
+                                        Alex Paes
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status complete"></div>
+                                            Completo
+                                        </div>
+                                    </td>
+                                    <td>R$35,44</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">02</th>
+                                    <td><div class="car-id">5665</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-02.svg" alt="driver avatar">
+                                        Rafael Lemos
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status pending"></div>
+                                            Pendente
+                                        </div>
+                                    </td>
+                                    <td>R$0,00</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">03</th>
+                                    <td><div class="car-id">1775</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-03.svg" alt="driver avatar">
+                                        Lucas Martins
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status in-route"></div>
+                                            Em Rota
+                                        </div>
+                                    </td>
+                                    <td>R$23,50</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
 
                     </section>

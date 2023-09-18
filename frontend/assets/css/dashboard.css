@@ -1,21 +1,16 @@
 
 
-/* -------------------------------------- GENERAK -------------------------------------- */
+/* -------------------------------------- GENERAL -------------------------------------- */
 
 
 .db-container {
     display: grid;
     grid-template-columns:2fr 1fr;
     gap: 1rem;
-    /* background-color: aquamarine; */
 }
 
-/* .main-db-content {
-    background-color: blueviolet;
-} */
-
 .side-db-content {
-    background-color: chocolate;
+    background-color: rgb(78, 199, 255);
 }
 
 .db-content {
@@ -26,9 +21,7 @@
 }
 
 
-
 /* -------------------------------------- SEARCH -------------------------------------- */
-
 .search-container {
 
     max-width: 300px;
@@ -59,9 +52,7 @@
 }
 
 
-
 /* ---------------------------------- AVAILABLE CARS ---------------------------------- */
-
 .db-ac-title {
     color: var(--ec-blue01);
     font-size: 1rem;
@@ -87,9 +78,66 @@
     border: none;
 }
 
-
 /* input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
  */
 
+
+/* ---------------------------------- STATUS TABLE ---------------------------------- */
+.db-status-table h2 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.db-status-table tr {
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+.db-status-table th {
+    justify-content: center;
+}
+
+.car-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9999993b;
+    border-radius: 4px;
+    max-width: 80%;
+    padding: .3rem;
+}
+
+.driver{
+    max-width: 100px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.rent-status {
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    border-style: double;
+    border-color: #fff;
+    margin-right: .2rem;
+}
+
+.complete {
+    background-color: #52C93F;
+}
+
+.pending {
+    background-color: #006AFF;
+}
+
+.in-route {
+    background-color: #FF2727;
+}
+/* ---------------------------------- SIDE CONTENT ---------------------------------- */

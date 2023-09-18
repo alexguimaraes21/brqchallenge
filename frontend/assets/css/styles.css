@@ -14,7 +14,6 @@ border: 3px solid white;  /* creates padding around scroll thumb */
 }
 
 
-
 /* ---------------------------------- GENERAL ---------------------------------- */
 * {
     font-family: 'Poppins', sans-serif;
@@ -23,7 +22,6 @@ border: 3px solid white;  /* creates padding around scroll thumb */
 body {
     background-color: rgb(238, 238, 238);
 }
-
 
 .bg-blue {
     background-color: var(--ec-blue01);
@@ -39,7 +37,6 @@ body {
 .bg-blue-menu:hover {
     background-color: var(--ec-blue01);
 }
-
 
 
 /* --------------------------------- LEFT MENU --------------------------------- */
@@ -74,7 +71,6 @@ body {
     height: 100%;
     overflow-y: auto;
 }
-
 
 .menu-icon {
     font-size: 1.3rem;
@@ -128,12 +124,9 @@ body {
 }
 
 
-
 /* --------------------------------- CONTENT BLOCK --------------------------------- */
-
 .content-block {
     width: 100%;
     padding: 2rem;
     background-color: #fff;
 }
-

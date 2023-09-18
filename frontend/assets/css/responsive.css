@@ -1,23 +1,18 @@
 
 
 @media (max-width: 1200px) {
-
-/* -------------------------------------- LAYOUT -------------------------------------- */
-
-
 /* ------------------------------------- DASHBOARD ------------------------------------- */
     .db-ac-content{
         flex-direction: column;
     }
-
 }
 
 
-
-
 @media (max-width: 992px) {
-
 /* -------------------------------------- LAYOUT -------------------------------------- */
+    .content-block {
+        padding: 1rem;
+    }
 
     .main-container {
         flex-direction: column;
@@ -43,7 +38,6 @@
     }
 
 
-
 /* ------------------------------------- DASHBOARD ------------------------------------- */
     .db-container {
         display: flex;
@@ -60,3 +54,14 @@
 
 }
 
+
+@media (max-width: 440px) {
+/* ------------------------------------- DASHBOARD ------------------------------------- */
+    .driver {
+        display: none;
+    }
+
+    .rent-status { 
+        display: none;
+    }
+}
