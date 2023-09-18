@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Easy Carros</title>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- BOOTSTRAP CSS -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+        <!-- PERSONAL CSS -->
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+    </head>
+
+    <body>
+        <header class="header-login">
+            <div>
+                <img src="../images/logos/logo-white-01.svg" alt="easy carros logo" width=75">
+            </div>
+            <div>
+                <p>O seu caminho mais fácil!</p>
+            </div>
+            <div>
+                <div class="div-help">
+                    <button>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <p>Ajuda</p>
+                </div>
+                <button>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        <div class="container-login">
+            <div class="left-content">
+                <img src="../images/icons/icon-people-traveling.svg" alt="people traveling icon" class="people-traveling-image">
+                <div class="network">
+                    <img src="../images/logos/logo-colorful.svg" alt="easy carros logo" class="logo-easy-carro">
+                    <div class="div-network-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <p class="info-login">Por favor, insira suas informações de acesso.</p>
+                <form class="form-input-login">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="">
+                        <label for="floatingInput">Email do usuário</label>
+                    </div>
+                    <div class="div-password">
+                        <div class="form-floating input-password">
+                            <input type="password" class="form-control" name="password" id="password" placeholder=""><i class="fa-solid fa-eye" id="togglePassword"></i>
+                            <label for="floatingPassword">Senha</label>
+                        </div>
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                    <button><a href="../pages/dashboard.html">Acessar</a></button>
+                </form>
+                
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy 2023, EasyCarros</p>
+            <p class="p-rules">Termos de Serviço</p>
+            <div class="language-footer">
+                <p>Idioma</p>
+                <select class="form-select" aria-label="Idioma">
+                    <option selected>Português (Brasil)</option>
+                    <option value="1">Inglês (Estados Unidos)</option>
+                </select>
+            </div>
+        </footer>
+    </body>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity= "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- PERSONAL JS -->
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', () => {
+            const type = password .getAttribute('type') === 'password' ? 'text' : 'password';
+
+            type == 'text'? 
+            togglePassword.classList.replace('fa-eye', 'fa-eye-slash') : 
+            togglePassword.classList.replace('fa-eye-slash', 'fa-eye');
+            password.setAttribute('type', type);
+        });
+    </script>
+</html>
