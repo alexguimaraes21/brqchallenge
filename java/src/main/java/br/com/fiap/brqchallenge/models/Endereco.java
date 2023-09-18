@@ -7,10 +7,11 @@ public class Endereco extends AbstractModel {
     private String nmLogradouro;
     private EnumTipoLogradouro tipoLogradouro;
     private Integer nrLogradouro;
+    private String nmComplemento;
     private String nrCep;
     private String nmBairro;
     private String nmMunicipio;
-    private EnumTipoEstado estado;
+    private EnumTipoEstado nmEstado;
 
     public String getNmLogradouro() {
         return nmLogradouro;
@@ -34,6 +35,14 @@ public class Endereco extends AbstractModel {
 
     public void setNrLogradouro(Integer nrLogradouro) {
         this.nrLogradouro = nrLogradouro;
+    }
+
+    public String getNmComplemento() {
+        return nmComplemento;
+    }
+
+    public void setNmComplemento(String nmComplemento) {
+        this.nmComplemento = nmComplemento;
     }
 
     public String getNrCep() {
@@ -60,11 +69,11 @@ public class Endereco extends AbstractModel {
         this.nmMunicipio = nmMunicipio;
     }
 
-    public EnumTipoEstado getEstado() {
-        return estado;
+    public EnumTipoEstado getNmEstado() {
+        return nmEstado;
     }
 
-    public void setEstado(EnumTipoEstado estado) {
-        this.estado = estado;
+    public void setNmEstado(EnumTipoEstado nmEstado) {
+        this.nmEstado = nmEstado;
     }
 }

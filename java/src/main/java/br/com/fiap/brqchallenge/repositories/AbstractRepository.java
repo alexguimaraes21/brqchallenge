@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public abstract class AbstractRepository<T> implements BasicOperation<T> {
 
-    private List<T> objects;
+    protected List<T> objects;
 
     @Override
     public void cadastrar(T o) {

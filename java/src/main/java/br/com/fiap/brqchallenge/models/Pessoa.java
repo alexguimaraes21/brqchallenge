@@ -10,6 +10,7 @@ public class Pessoa {
 	private String nmPessoa;
 	private EnumTipoPessoa tipoPessoa;
 	private List<Telefone> telefones;
+	private Endereco residencial;
 
 	public long getId() {
 		return id;
@@ -41,5 +42,13 @@ public class Pessoa {
 
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
+	}
+
+	public Endereco getResidencial() {
+		return residencial;
+	}
+
+	public void setResidencial(Endereco residencial) {
+		this.residencial = residencial;
 	}
 }
