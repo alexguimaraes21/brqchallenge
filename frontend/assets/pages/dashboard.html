@@ -23,6 +23,7 @@
     <!-- PERSONAL CSS -->
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
@@ -128,25 +129,73 @@
             <!-- VARIABLE CONTENT -->
             <section class="content-block">
                 <h1>DASHBOARD</h1>
-                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
+                <div class="db-container">
+                    <section class="main-db-content">
+
+                        <div class="search-container my-4">
+                            <label for="searchInput" class="search-label">
+                                <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar...">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+
+                        <div class="db-content">
+                            <h3 class="db-ac-title">
+                                Carros disponíveis
+                            </h3>
+
+                            <div class="db-ac-content">
+
+                                <div class="flex-column m-1">
+                                    <label class="db-available-cars my-3">
+                                        <img src="../images/icons/icon-car.svg" alt="car icon">
+                                        <select class="form-select db-car-select" aria-label="Default select example">
+                                            <option selected>Número do carro</option>
+                                            <option value="1">6465</option>
+                                            <option value="2">5665</option>
+                                            <option value="3">1755</option>
+                                        </select>
+                                    </label>
+    
+                                    <div class="my-3" >
+                                        <div class="input-group">
+                                            <label class="db-available-cars">
+                                                <!-- <img src="../images/icons/icon-calendar.svg" alt="calendar icon"> -->
+                                                <input type="date" class="form-control form db-car-select" >
+                                            </label>
+                                            <label class="db-available-cars">
+                                                <!-- <img src="../images/icons/icon-clock.svg" alt="clock icon"> -->
+                                                <input type="time" class="form-control form db-car-select" >
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class=" btn bg-blue p-3 check-btn">
+                                    Check
+                                </button>
+
+
+
+                            </div>
+
+
+
+                            
+                        </div>
+
+                    </section>
+
+                    <section class="side-db-content">
+                        <h2>Estatísticas de hoje</h2>
+                        <p class="db-date">Qua, 14 Set, 2023, 11:30</p>
+
+                    </section>
+
                 </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
-
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
 
             </section>
         </div>
@@ -164,6 +213,8 @@
 
 
         <!-- PERSONAL JS -->
+    <script src="../js/dashboard.js"></script>
+
 
 </body>
 

@@ -132,7 +132,8 @@ body {
 /* --------------------------------- CONTENT BLOCK --------------------------------- */
 
 .content-block {
-
+    width: 100%;
     padding: 2rem;
     background-color: #fff;
 }
+
