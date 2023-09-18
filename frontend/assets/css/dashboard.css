@@ -1,0 +1,95 @@
+
+
+/* -------------------------------------- GENERAK -------------------------------------- */
+
+
+.db-container {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    gap: 1rem;
+    /* background-color: aquamarine; */
+}
+
+/* .main-db-content {
+    background-color: blueviolet;
+} */
+
+.side-db-content {
+    background-color: chocolate;
+}
+
+.db-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 24px 0px #4545502f;
+    padding: 1rem;
+}
+
+
+
+/* -------------------------------------- SEARCH -------------------------------------- */
+
+.search-container {
+
+    max-width: 300px;
+    color: var(--ec-blue01);
+    border-radius: 12px;
+    box-shadow: 0px 2.7px 27px 0px rgba(69, 69, 80, 0.144);
+}
+
+.search-label {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.fa-magnifying-glass {
+    margin-right: 0.5rem;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
+/* ---------------------------------- AVAILABLE CARS ---------------------------------- */
+
+.db-ac-title {
+    color: var(--ec-blue01);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.db-ac-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.db-available-cars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #DEDEDE;
+    padding-left: .8rem;
+}
+
+.db-car-select {
+    border: none;
+}
+
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+ */
+
