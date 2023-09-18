@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Carros</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous">
+
+    <!-- PERSONAL CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <header class="menu-easycarros">
+                <img src="../images/logos/logo-white-01.svg" alt="easy carros logo" class="logo">
+
+                <!-- MENU -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <button class="navbar-toggler mx-4 navbar-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-content" id="navbarNav">
+                        <ul class="navbar-nav flex-column ">
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-active">
+                                    <a class="nav-link " href="./dashboard.html">
+                                        <img src="../images/icons/icon-dashboard.svg" alt="dashboard icon" class="me-3">
+                                        Dashboard
+                                    </a>
+                                </div>
+
+                            </li>
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link" href="./historic.html">
+                                        <i class="fa-solid fa-list menu-icon me-3"></i>
+                                        Histórico
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa-solid fa-umbrella menu-icon me-3"></i>
+                                        Equipamentos
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link " href="./analysis.html">
+                                        <i class="fa-solid fa-user-gear menu-icon me-3"></i>
+                                        Análise de Perfil
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa-solid fa-bell menu-icon me-3"></i>
+                                        Notificações
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item my-2">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa-solid fa-gear menu-icon me-3"></i>
+                                        Configurações
+                                    </a>
+                                </div>
+                            </li>
+
+                            <div class="divider"></div>
+
+                            <li class="nav-item">
+                                <div class="item-container">
+                                    Reportes
+                                </div>
+                            </li>
+
+                            <li class="nav-item mt-2 mb-5">
+                                <div class="item-container item-inactive">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa-solid fa-wrench menu-icon me-3"></i>
+                                        Manutenções
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <button type="submit" class="menu-btn">
+                            <img src="../images/icons/icon-logout.svg" alt="" class="me-3">
+                            Sair
+                        </button>
+                    </div>
+                </nav>
+                <!-- MENU END -->
+            </header>
+
+
+
+            <!-- VARIABLE CONTENT -->
+            <section class="content-block">
+                <h1>DASHBOARD</h1>
+                <div class="db-container">
+                    <section class="main-db-content">
+
+                        <div class="search-container my-4">
+                            <label for="searchInput" class="search-label">
+                                <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar...">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+
+                        <div class="db-content">
+                            <h3 class="db-ac-title">
+                                Carros disponíveis
+                            </h3>
+                            <div class="db-ac-content">
+                                <div class="flex-column m-1">
+                                    <label class="db-available-cars my-3">
+                                        <img src="../images/icons/icon-car.svg" alt="car icon">
+                                        <select class="form-select db-car-select" aria-label="Default select example">
+                                            <option selected>Número do carro</option>
+                                            <option value="1">6465</option>
+                                            <option value="2">5665</option>
+                                            <option value="3">1755</option>
+                                        </select>
+                                    </label>
+                                    <div class="my-3" >
+                                        <div class="input-group">
+                                            <label class="db-available-cars">
+                                                <!-- <img src="../images/icons/icon-calendar.svg" alt="calendar icon"> -->
+                                                <input type="date" class="form-control form db-car-select" >
+                                            </label>
+                                            <label class="db-available-cars">
+                                                <!-- <img src="../images/icons/icon-clock.svg" alt="clock icon"> -->
+                                                <input type="time" class="form-control form db-car-select" >
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class=" btn bg-blue p-3 check-btn">
+                                    Check
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="db-status-table my-5">
+                            <h2>Status dos aluguéis</h2>
+                            <table class="table align-middle">
+                                <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">No. Carro</th>
+                                    <th scope="col" class="driver">Motorista</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Aluguel</th>
+                                    <th scope="col"> </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">01</th>
+                                    <td><div class="car-id">6465</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-01.svg" alt="driver avatar">
+                                        Alex Paes
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status complete"></div>
+                                            Completo
+                                        </div>
+                                    </td>
+                                    <td>R$35,44</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">02</th>
+                                    <td><div class="car-id">5665</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-02.svg" alt="driver avatar">
+                                        Rafael Lemos
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status pending"></div>
+                                            Pendente
+                                        </div>
+                                    </td>
+                                    <td>R$0,00</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">03</th>
+                                    <td><div class="car-id">1775</div></td>
+                                    <td class="driver">
+                                        <img src="../images/generals/avatar-03.svg" alt="driver avatar">
+                                        Lucas Martins
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            <div class="rent-status in-route"></div>
+                                            Em Rota
+                                        </div>
+                                    </td>
+                                    <td>R$23,50</td>
+                                    <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+
+                    <section class="side-db-content">
+                        <h2>Estatísticas de hoje</h2>
+                        <p class="db-date">Qua, 14 Set, 2023, 11:30</p>
+
+                    </section>
+
+                </div>
+
+
+
+
+            </section>
+        </div>
+    </div>
+
+
+    <!-- BOOTSTRAP JS -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+        <!-- PERSONAL JS -->
+    <script src="../js/dashboard.js"></script>
+
+
+</body>
+
+</html>
