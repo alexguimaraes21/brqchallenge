@@ -24,6 +24,11 @@ public abstract class AbstractRepository<T> implements BasicOperation<T> {
     }
 
     @Override
+    public void remover(Predicate<T> predicate) {
+        this.objects.removeIf(predicate);
+    }
+
+    @Override
     public List<T> buscarTodos() {
         return this.objects;
     }

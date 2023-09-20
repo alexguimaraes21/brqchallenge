@@ -46,6 +46,9 @@ public class BrqChallengeApplication {
         TelefoneBean telefoneBean = new TelefoneBean(telefoneRepository);
         UsuarioBean usuarioBean = new UsuarioBean(usuarioRepository, pessoaRepository, telefoneRepository, enderecoRepository);
 
+        // Carregando o sistema com um usuário e pessoa
+        cargaInicial(usuarioBean);
+
         /*
          * Iniciando os cadastros utilizando as regras aplicadas nos Beans de Negócio
          */
@@ -60,7 +63,7 @@ public class BrqChallengeApplication {
             System.out.println("Para cadastrar um usuário, entre com a opção 1");
             System.out.println("Para listar um usuário, entre com a opção 2");
             System.out.println("Para listar todos os usuários, entre com a opção 3");
-            System.out.println("Para editar um usuário, entre com a opção 4");
+            System.out.println("Para remover um usuário, entre com a opção 4");
             Scanner scanner = new Scanner(System.in);
             try {
                 opcaoMenu = Integer.parseInt(scanner.nextLine());
@@ -205,7 +208,12 @@ public class BrqChallengeApplication {
                         System.out.println("Nenhum usuário cadastrado!");
                     }
                     break;
-                case 4: //editar um usuário
+                case 4:
+                    System.out.println("Digite o ID do usuário que deseja remover: ");
+                    String idUsuarioRemover = scanner.nextLine();
+                    usuarioBean.remover(Long.parseLong(idUsuarioRemover));
+                    break;
+                case 5: //editar um usuário
                     System.out.println("Digite o ID do usuário que deseja editar: ");
                     String idUsuarioEditar = scanner.nextLine();
                     System.out.println("Digite o ID do usuário que deseja editar: ");
@@ -216,12 +224,99 @@ public class BrqChallengeApplication {
                     String nmPessoaEditar = scanner.nextLine();
                     System.out.println("Digite o ID do usuário que deseja editar: ");
                     String tipoPessoaEditar = scanner.nextLine();
-                    usuarioBean.editar(Long.parseLong(idUsuarioEditar), dsEmailEditar, dsSenhaEditar, nmPessoaEditar, tipoPessoaEditar, telefones);
+                    usuarioBean.editar(Long.parseLong(idUsuarioEditar), dsEmailEditar, dsSenhaEditar, nmPessoaEditar, tipoPessoaEditar);
                     break;
                 default:
                     System.out.println("Opção inválida");
                     break;
             }
         }
+    }
+
+    private static void cargaInicial(UsuarioBean usuarioBean) {
+        List<Telefone> telefones = new ArrayList<>();
+        // Usuário ID: 1
+        String dsEmail = "pedro.de.lara@gmail.com";
+        String dsSenha = "lara7401";
+        String nmPessoa = "Pedro de Lara";
+        String tipoPessoa = "PF";
+        String nmLogradouro = "Rua XV de Novembro";
+        String tipoLogradouro = "RUA";
+        String nrLogradouro = "13";
+        String nmComplemento = "SALA 78B";
+        String nrCep = "11089-190";
+        String nmBairro = "Jardim Bom Retiro";
+        String nmMunicipio = "Santos";
+        String estado = "SP";
+        // Telefone Fixo
+        Telefone telefoneFixo = new Telefone();
+        telefoneFixo.setNrTelefone("3387-1573");
+        telefoneFixo.setNrDdd("13");
+        telefoneFixo.setTipoTelefone(EnumTipoTelefone.FIXO);
+        telefones.add(telefoneFixo);
+        // Telefone Celular
+        Telefone telefoneCel = new Telefone();
+        telefoneCel.setNrTelefone("97324-1875");
+        telefoneCel.setNrDdd("13");
+        telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
+        telefones.add(telefoneCel);
+
+        usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+
+
+        telefones.removeAll(telefones);
+        // Usuário ID: 2
+        dsEmail = "marcos.manoel@gmail.com";
+        dsSenha = "Dg8gs1V3%";
+        nmPessoa = "Marcos Manoel Ferreira Silveira";
+        tipoPessoa = "PF";
+        nmLogradouro = "Olivo Gome";
+        tipoLogradouro = "AVENIDA";
+        nrLogradouro = "1121";
+        nmComplemento = "APTO 112";
+        nrCep = "12211-112";
+        nmBairro = "Santana";
+        nmMunicipio = "São José dos Campos";
+        estado = "SP";
+        // Telefone Fixo
+        telefoneFixo.setNrTelefone("2378-3782");
+        telefoneFixo.setNrDdd("12");
+        telefoneFixo.setTipoTelefone(EnumTipoTelefone.FIXO);
+        telefones.add(telefoneFixo);
+        // Telefone Celular
+        telefoneCel.setNrTelefone("94242-1288");
+        telefoneCel.setNrDdd("12");
+        telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
+        telefones.add(telefoneCel);
+        usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+
+        telefones.removeAll(telefones);
+        // Usuário ID: 3
+        dsEmail = "silvia.rodrigues@yahoo.com.br";
+        dsSenha = "Brhd934Ga*d!";
+        nmPessoa = "silvia Marques Rodrigies";
+        tipoPessoa = "PF";
+        nmLogradouro = "Canário";
+        tipoLogradouro = "RUA";
+        nrLogradouro = "78";
+        nmComplemento = "AP 94";
+        nrCep = "12345-456";
+        nmBairro = "Moemo";
+        nmMunicipio = "São Paulo";
+        estado = "SP";
+        // Telefone Fixo
+        telefoneFixo.setNrTelefone("3157-1123");
+        telefoneFixo.setNrDdd("11");
+        telefoneFixo.setTipoTelefone(EnumTipoTelefone.FIXO);
+        telefones.add(telefoneFixo);
+        // Telefone Celular
+        telefoneCel.setNrTelefone("98576-1766");
+        telefoneCel.setNrDdd("11");
+        telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
+        telefones.add(telefoneCel);
+        usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
     }
 }

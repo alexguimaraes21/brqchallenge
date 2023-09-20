@@ -91,7 +91,7 @@ public class UsuarioBean {
         return usuarioRepository.buscarTodos();
     }
 
-    public void editar(long id, String dsEmail, String dsSenha, String nmPessoa, String tipoPessoa, List<Telefone> telefones) {
+    public void editar(long id, String dsEmail, String dsSenha, String nmPessoa, String tipoPessoa) { //, List<Telefone> telefones) {
         Optional<Usuario> usuario = usuarioRepository.buscarPorId(obj -> obj.getId() == id);
         if (usuario.isPresent()) {
             usuario.get().setDsEmail(dsEmail);
@@ -99,12 +99,26 @@ public class UsuarioBean {
             Pessoa pessoa = pessoaRepository.buscarPorId(pes -> pes.getId() == usuario.get().getPessoa().getId()).get();
             pessoa.setNmPessoa(nmPessoa);
             pessoa.setTipoPessoa(EnumTipoPessoa.valueOf(tipoPessoa.toUpperCase()));
-            for (Telefone telefone : telefones) {
-                telefoneRepository.atualizar(tel -> tel.getId() == telefone.getId(), telefone);
-            }
-            pessoa.setTelefones(telefones);
+//            for (Telefone telefone : telefones) {
+//                telefoneRepository.atualizar(tel -> tel.getId() == telefone.getId(), telefone);
+//            }
+//            pessoa.setTelefones(telefones);
             pessoaRepository.atualizar(pes -> pes.getId() == pessoa.getId(), pessoa);
             usuarioRepository.atualizar(obj -> obj.getId() == id, usuario.get());
+        }
+    }
+
+    public void remover(long id) {
+        Optional<Usuario> usuario = usuarioRepository.buscarPorId(obj -> obj.getId() == id);
+        if (usuario.isPresent()) {
+            for (Telefone telefone :
+                    usuario.get().getPessoa().getTelefones()) {
+                telefoneRepository.remover(tel -> tel.getId() == telefone.getId());
+            }
+            pessoaRepository.remover(pes -> pes.getId() == usuario.get().getPessoa().getId());
+            usuarioRepository.remover(usu -> usu.getId() == id);
+        } else {
+            System.out.println("Usuário não encontrado");
         }
     }
 }

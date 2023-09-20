@@ -10,4 +10,5 @@ public interface BasicOperation<T> {
 	Optional<T> buscarPorId(Predicate<T> predicate);
 	List<T> buscarTodos();
 	void atualizar(Predicate<T> predicate, T t);
+	void remover(Predicate<T> predicate);
 }
