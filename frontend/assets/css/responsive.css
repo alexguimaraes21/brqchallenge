@@ -66,6 +66,7 @@
 
     .side-db-content {
         margin-left: 0;
+        margin-top: 2rem;
     }
 
 }
@@ -84,5 +85,17 @@
     .table button {
         max-width: 70px;
         font-size: .5rem;
+    }
+
+    .es-select {
+        font-size: .6rem;
+    }
+
+    .es-legend {
+        justify-content: center;
+    }
+
+    .legend {
+        font-size: .6rem;
     }
 }

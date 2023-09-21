@@ -175,7 +175,14 @@
                         </div>
 
                         <div class="db-status-table my-5">
-                            <h2>Status dos aluguéis</h2>
+                            <div class="status-header">
+                                <h2>Status dos aluguéis</h2>
+                                <button class="status-filter">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    Filtro
+                                </button>
+                            </div>
+
                             <table class="table align-middle">
                                 <thead>
                                 <tr>
@@ -247,6 +254,17 @@
                                     <select class="form-select es-select" aria-label="Default select example">
                                         <option selected>Maio 2023 - Agosto 2023</option>
                                     </select>
+                                </div>
+                                <div class="es-legend">
+                                    <div class="legend">
+                                        <div class="legend-m"></div>
+                                        Últimos 6 meses
+                                    </div>
+                                    <div class="legend">
+                                        <div class="legend-y"></div>
+                                        Mesmo período 2022
+                                    </div>
+                                    
                                 </div>
                                 <div class="es-info"></div>
                                 <figure>
