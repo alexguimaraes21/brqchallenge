@@ -42,6 +42,7 @@ body {
 /* --------------------------------- LEFT MENU --------------------------------- */
 .main-container {
     display: flex;
+    background-color: var(--ec-blue01);
 }
 
 .menu-easycarros {
@@ -55,6 +56,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center ;
+    flex-grow: 1;
 
 }
 

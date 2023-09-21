@@ -1,17 +1,12 @@
 
 
 /* -------------------------------------- GENERAL -------------------------------------- */
-
-
 .db-container {
     display: grid;
     grid-template-columns:2fr 1fr;
     gap: 1rem;
 }
 
-.side-db-content {
-    background-color: rgb(78, 199, 255);
-}
 
 .db-content {
     background-color: #fff;
@@ -140,4 +135,102 @@
 .in-route {
     background-color: #FF2727;
 }
+
+
 /* ---------------------------------- SIDE CONTENT ---------------------------------- */
+
+.side-db-content {
+    margin-left: 1rem;
+}
+
+.side-db-content h2 {
+    color: #525256;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.side-db-content p {
+    color: #A3A3A3;
+    font-size: .8rem;
+
+}
+
+/* ----- CARD ----- */
+.db-card {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 2.7px 27px 0px rgba(69, 69, 80, 0.144);
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    color: #656575;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ec-blue03);
+    color: #fff;
+    padding: .3rem 1rem;
+    border-radius: 2px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.negative {
+    color: #FF2727;
+}
+
+.positive {
+    color: #52C93F;
+}
+
+.card-divider {
+    background-color: #dfdfdf;
+    height: 1px;
+    width: 100%;
+}
+
+.card-trend {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-footer{
+    color: #656575;
+    font-size: .9rem;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.ft-week{
+    font-weight: 600;
+}
+
+.card-chart {
+    width: 100%;
+    max-width: 240px;
+}
+/* ----- CARD END ----- */
