@@ -1,6 +1,7 @@
 package br.com.fiap.brqchallenge.beans;
 
 import br.com.fiap.brqchallenge.models.Acessorio;
+import br.com.fiap.brqchallenge.models.Marca;
 import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
 import br.com.fiap.brqchallenge.repositories.MarcaRepository;
 
@@ -15,37 +16,25 @@ public class MarcaBean {
         this.marcaRepository = repository;
     }
 
-    public void cadastrar(String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
-        AcessorioRepository acessorioRepository = new AcessorioRepository();
-        Acessorio acessorio = new Acessorio();
-        acessorio.setNmAcessorio(nmAcessorio);
-        acessorio.setDsAcessorio(dsAcessorio);
-        acessorio.setVlAcessorioHora(vlAcessorioHora);
-        acessorio.setVlAcessorioDiaria(vlAcessorioDiaria);
-        acessorio.setVlAcessorioMensal(vlAcessorioMensal);
-        acessorioRepository.cadastrar(acessorio);
+    public void cadastrar(String nmMarca) {
+        Marca marca = new Marca();
+        marca.setNmMarca(nmMarca);
+        marcaRepository.cadastrar(marca);
     }
 
-    public Optional<Acessorio> buscarPorId(long id) {
-        AcessorioRepository acessorioRepository = new AcessorioRepository();
-        return acessorioRepository.buscarPorId(obj -> obj.getId() == id);
+    public Optional<Marca> buscarPorId(long id) {
+        return marcaRepository.buscarPorId(obj -> obj.getId() == id);
     }
 
-    public List<Acessorio> listarTodos() {
-        AcessorioRepository acessorioRepository = new AcessorioRepository();
-        return acessorioRepository.buscarTodos();
+    public List<Marca> listarTodos() {
+        return marcaRepository.buscarTodos();
     }
 
-    public void editar(long id, String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
-        AcessorioRepository acessorioRepository = new AcessorioRepository();
-        Optional<Acessorio> acessorio = this.buscarPorId(id);
-        if (acessorio.isPresent()) {
-            acessorio.get().setNmAcessorio(nmAcessorio);
-            acessorio.get().setDsAcessorio(dsAcessorio);
-            acessorio.get().setVlAcessorioHora(vlAcessorioHora);
-            acessorio.get().setVlAcessorioDiaria(vlAcessorioDiaria);
-            acessorio.get().setVlAcessorioMensal(vlAcessorioMensal);
-            acessorioRepository.atualizar(obj -> obj.getId() == id, acessorio.get());
+    public void editar(long id, String nmMarca) {
+        Optional<Marca> marca = this.buscarPorId(id);
+        if (marca.isPresent()) {
+            marca.get().setNmMarca(nmMarca);
+            marcaRepository.atualizar(obj -> obj.getId() == id, marca.get());
         }
     }
 }

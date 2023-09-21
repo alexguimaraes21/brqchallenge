@@ -3,6 +3,7 @@ package br.com.fiap.brqchallenge;
 import br.com.fiap.brqchallenge.beans.*;
 import br.com.fiap.brqchallenge.enums.EnumTipoTelefone;
 import br.com.fiap.brqchallenge.models.Endereco;
+import br.com.fiap.brqchallenge.models.Marca;
 import br.com.fiap.brqchallenge.models.Telefone;
 import br.com.fiap.brqchallenge.models.Usuario;
 import br.com.fiap.brqchallenge.repositories.*;
@@ -47,7 +48,7 @@ public class BrqChallengeApplication {
         UsuarioBean usuarioBean = new UsuarioBean(usuarioRepository, pessoaRepository, telefoneRepository, enderecoRepository);
 
         // Carregando o sistema com um usuário e pessoa
-        cargaInicial(usuarioBean);
+        cargaInicial(usuarioBean, marcaBean);
 
         /*
          * Iniciando os cadastros utilizando as regras aplicadas nos Beans de Negócio
@@ -64,6 +65,8 @@ public class BrqChallengeApplication {
             System.out.println("Para listar um usuário, entre com a opção 2");
             System.out.println("Para listar todos os usuários, entre com a opção 3");
             System.out.println("Para remover um usuário, entre com a opção 4");
+            System.out.println("Para listar uma marca, entre com a opção 12");
+            System.out.println("Para listar todas as marcas, entre com a opção 13");
             Scanner scanner = new Scanner(System.in);
             try {
                 opcaoMenu = Integer.parseInt(scanner.nextLine());
@@ -213,6 +216,7 @@ public class BrqChallengeApplication {
                     String idUsuarioRemover = scanner.nextLine();
                     usuarioBean.remover(Long.parseLong(idUsuarioRemover));
                     break;
+                /*
                 case 5: //editar um usuário
                     System.out.println("Digite o ID do usuário que deseja editar: ");
                     String idUsuarioEditar = scanner.nextLine();
@@ -226,6 +230,31 @@ public class BrqChallengeApplication {
                     String tipoPessoaEditar = scanner.nextLine();
                     usuarioBean.editar(Long.parseLong(idUsuarioEditar), dsEmailEditar, dsSenhaEditar, nmPessoaEditar, tipoPessoaEditar);
                     break;
+                 */
+                case 12: // listar um usuário
+                    System.out.println("Digite o ID do marca: ");
+                    String idMarca = scanner.nextLine();
+                    Optional<Marca> marca = marcaBean.buscarPorId(Long.parseLong(idMarca));
+                    if (marca.isPresent()) {
+                        System.out.println("Marca com ID: [ " + idMarca + " ]");
+                        System.out.println("Nome: [ " + marca.get().getNmMarca() + " ]");
+                        System.out.println("Cadastrada em: [ " + marca.get().getCadastradoEm() + " ]");
+                    } else {
+                        System.out.println("Marca não encontrada!");
+                    }
+                    break;
+                case 13: // listar todos os usuários
+                    List<Marca> marcas = marcaBean.listarTodos();
+                    if ( null != marcas ) {
+                        for (Marca marcaCadastrada : marcas) {
+                            System.out.println("Usuário com ID: [ " + marcaCadastrada.getId() + " ]");
+                            System.out.println("Nome: [ " + marcaCadastrada.getNmMarca() + " ]");
+                            System.out.println("Cadastrada em: [ " + marcaCadastrada.getCadastradoEm() + " ]");
+                        }
+                    } else {
+                        System.out.println("Nenhuma marca cadastrada!");
+                    }
+                    break;
                 default:
                     System.out.println("Opção inválida");
                     break;
@@ -233,7 +262,7 @@ public class BrqChallengeApplication {
         }
     }
 
-    private static void cargaInicial(UsuarioBean usuarioBean) {
+    private static void cargaInicial(UsuarioBean usuarioBean, MarcaBean marcaBean) {
         List<Telefone> telefones = new ArrayList<>();
         // Usuário ID: 1
         String dsEmail = "pedro.de.lara@gmail.com";
@@ -318,5 +347,17 @@ public class BrqChallengeApplication {
         telefones.add(telefoneCel);
         usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
                 Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+
+        // Marca ID: 1
+        String dsMarca = "Fiat";
+        marcaBean.cadastrar(dsMarca);
+
+        // Marca ID: 2
+        dsMarca = "Volkswagen";
+        marcaBean.cadastrar(dsMarca);
+
+        // Marca ID: 3
+        dsMarca = "Chevrolet";
+        marcaBean.cadastrar(dsMarca);
     }
 }
