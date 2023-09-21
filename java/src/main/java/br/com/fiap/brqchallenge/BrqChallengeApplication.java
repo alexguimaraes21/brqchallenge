@@ -41,7 +41,7 @@ public class BrqChallengeApplication {
         EnderecoBean enderecoBean = new EnderecoBean(enderecoRepository);
         LocacaoBean locacaoBean = new LocacaoBean(locacaoRepository);
         MarcaBean marcaBean = new MarcaBean(marcaRepository);
-        ModeloBean modeloBean = new ModeloBean(modeloRepository);
+        ModeloBean modeloBean = new ModeloBean(modeloRepository, marcaRepository);
         PagamentoBean pagamentoBean = new PagamentoBean(pagamentoRepository);
         PessoaBean pessoaBean = new PessoaBean(pessoaRepository);
         TelefoneBean telefoneBean = new TelefoneBean(telefoneRepository);

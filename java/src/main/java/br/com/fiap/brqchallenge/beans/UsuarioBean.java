@@ -121,4 +121,14 @@ public class UsuarioBean {
             System.out.println("Usuário não encontrado");
         }
     }
+
+    public Optional<Usuario> buscarPorEmail(String dsEmail, String txSenha) {
+        Optional<Usuario> usuario = usuarioRepository.buscarPorId(obj -> obj.getDsEmail() == dsEmail);
+        if (usuario.isPresent()) {
+            if (txSenha.equals(usuario.get().getDsSenha())) {
+                return usuario;
+            }
+        }
+        return Optional.empty();
+    }
 }

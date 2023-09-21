@@ -2,9 +2,11 @@ package br.com.fiap.brqchallenge.beans;
 
 import br.com.fiap.brqchallenge.models.Acessorio;
 import br.com.fiap.brqchallenge.models.Marca;
+import br.com.fiap.brqchallenge.models.Usuario;
 import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
 import br.com.fiap.brqchallenge.repositories.MarcaRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +36,7 @@ public class MarcaBean {
         Optional<Marca> marca = this.buscarPorId(id);
         if (marca.isPresent()) {
             marca.get().setNmMarca(nmMarca);
+            marca.get().setAtualizadoEm(LocalDateTime.now());
             marcaRepository.atualizar(obj -> obj.getId() == id, marca.get());
         }
     }
