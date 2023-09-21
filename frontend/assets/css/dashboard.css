@@ -137,10 +137,46 @@
 }
 
 
+/* -------------------------------- EARNING SUMMARY --------------------------------- */
+.earning-summary {
+    max-width: 100%;
+}
+
+.earning-summary img {
+    max-width: 100%; /* A imagem não excederá a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.es-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.es-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.es-select {
+    max-width: 220px;
+    border: none;
+    padding: 0;
+    max-height: 2rem;
+    font-size: .8rem;
+    color: #656575;
+    padding-inline: .6rem;
+}
+
+
+
 /* ---------------------------------- SIDE CONTENT ---------------------------------- */
 
 .side-db-content {
     margin-left: 1rem;
+    max-width: 100%;
 }
 
 .side-db-content h2 {
@@ -158,11 +194,13 @@
 /* ----- CARD ----- */
 .db-card {
     width: 100%;
+    max-width: 100%;
     height: auto;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 2.7px 27px 0px rgba(69, 69, 80, 0.144);
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 .card-header {
@@ -191,6 +229,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .card-value {
@@ -230,7 +269,12 @@
 }
 
 .card-chart {
-    width: 100%;
-    max-width: 240px;
+    max-width: 100%;
 }
+
+.card-chart img{
+    max-width: 100%;
+}
+
+
 /* ----- CARD END ----- */

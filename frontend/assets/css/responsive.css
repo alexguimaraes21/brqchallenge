@@ -1,4 +1,11 @@
 
+@media (max-width: 1390px) {
+    /* ------------------------------------- DASHBOARD ------------------------------------- */
+    .card-value {
+        font-size: 1.5rem;
+    }
+}
+
 
 @media (max-width: 1200px) {
 /* ------------------------------------- DASHBOARD ------------------------------------- */
@@ -37,6 +44,11 @@
         margin-bottom: 1rem;
     }
 
+    .table button {
+        max-width: 120px;
+        font-size: .7rem;
+    }
+
 
 /* ------------------------------------- DASHBOARD ------------------------------------- */
     .db-container {
@@ -52,6 +64,10 @@
         margin: 0 auto;
     }
 
+    .side-db-content {
+        margin-left: 0;
+    }
+
 }
 
 
@@ -63,5 +79,10 @@
 
     .rent-status { 
         display: none;
+    }
+
+    .table button {
+        max-width: 70px;
+        font-size: .5rem;
     }
 }
