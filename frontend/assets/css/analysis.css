@@ -1,0 +1,28 @@
+
+/* -------------------------------------- GENERAL -------------------------------------- */
+
+
+/* ----------------------------------- FILTER HEADER ----------------------------------- */
+
+.filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.filter-button {
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    color: #5e5e5e;
+    width: 100%;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filter-button img {
+    margin-right: .5rem;
+}
