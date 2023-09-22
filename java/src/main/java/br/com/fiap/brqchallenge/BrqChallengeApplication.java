@@ -2,12 +2,11 @@ package br.com.fiap.brqchallenge;
 
 import br.com.fiap.brqchallenge.beans.*;
 import br.com.fiap.brqchallenge.enums.EnumTipoTelefone;
-import br.com.fiap.brqchallenge.models.Endereco;
-import br.com.fiap.brqchallenge.models.Marca;
-import br.com.fiap.brqchallenge.models.Telefone;
-import br.com.fiap.brqchallenge.models.Usuario;
+import br.com.fiap.brqchallenge.models.*;
 import br.com.fiap.brqchallenge.repositories.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,6 @@ public class BrqChallengeApplication {
         LocacaoRepository locacaoRepository = new LocacaoRepository();
         MarcaRepository marcaRepository = new MarcaRepository();
         ModeloRepository modeloRepository = new ModeloRepository();
-        PagamentoRepository pagamentoRepository = new PagamentoRepository();
         PessoaRepository pessoaRepository = new PessoaRepository();
         TelefoneRepository telefoneRepository = new TelefoneRepository();
         UsuarioRepository usuarioRepository = new UsuarioRepository();
@@ -36,16 +34,13 @@ public class BrqChallengeApplication {
          * Inicializando os Beans para testar as classes
          */
         AcessorioBean acessorioBean = new AcessorioBean(acessorioRepository);
-        ArquivoBean arquivoBean = new ArquivoBean(arquivoRepository);
-        DocumentoBean documentoBean = new DocumentoBean(documentoRepository);
         EnderecoBean enderecoBean = new EnderecoBean(enderecoRepository);
-        LocacaoBean locacaoBean = new LocacaoBean(locacaoRepository);
+        LocacaoBean locacaoBean = new LocacaoBean(locacaoRepository, pessoaRepository, modeloRepository);
         MarcaBean marcaBean = new MarcaBean(marcaRepository);
         ModeloBean modeloBean = new ModeloBean(modeloRepository, marcaRepository);
-        PagamentoBean pagamentoBean = new PagamentoBean(pagamentoRepository);
         PessoaBean pessoaBean = new PessoaBean(pessoaRepository);
         TelefoneBean telefoneBean = new TelefoneBean(telefoneRepository);
-        UsuarioBean usuarioBean = new UsuarioBean(usuarioRepository, pessoaRepository, telefoneRepository, enderecoRepository);
+        UsuarioBean usuarioBean = new UsuarioBean(usuarioRepository, pessoaRepository, telefoneRepository, enderecoRepository, documentoRepository);
 
         // Carregando o sistema com um usuário e pessoa
         cargaInicial(usuarioBean, marcaBean);
@@ -90,6 +85,36 @@ public class BrqChallengeApplication {
                     String dddTelefone1 = scanner.nextLine();
                     System.out.println("Digite o telefone fixo: ");
 
+                    // Documento RG
+                    List<Documento> documentos = new ArrayList<>();
+
+                    System.out.println("Digite o número do RG:");
+                    String nrRg = scanner.nextLine();
+                    System.out.println("Digite o órgão expedidor:");
+                    String dsOrgaoExpedidorRg = scanner.nextLine();
+                    System.out.println("Digite a data de expedição no formato dd/mm/yyyy (21/11/2023):");
+                    String dtExpedicaoRg = scanner.nextLine();
+
+                    Documento rg = new Documento();
+                    rg.setNrDocumento(nrRg);
+                    rg.setOrgaoExpedidor(dsOrgaoExpedidorRg);
+                    rg.setDsDocumento("RG");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                    rg.setDtDataExpedicao(LocalDate.parse(dtExpedicaoRg, formatter));
+                    documentos.add(rg);
+
+                    // documento CNH
+                    System.out.println("Digite o número da CNH:");
+                    String nrCnh = scanner.nextLine();
+                    System.out.println("Digite a data de expedição no formato dd/mm/yyyy (21/11/2023):");
+                    String dtExpedicaoCnh = scanner.nextLine();
+                    Documento cnh = new Documento();
+                    cnh.setNrDocumento(nrCnh);
+                    cnh.setOrgaoExpedidor("DETRAN");
+                    cnh.setDsDocumento("CNH");
+                    cnh.setDtDataExpedicao(LocalDate.parse(dtExpedicaoCnh, formatter));
+                    documentos.add(cnh);
+
                     // Telefone Fixo
                     String numeroTelefone1 = scanner.nextLine();
                     Telefone telefoneFixo = new Telefone();
@@ -126,8 +151,9 @@ public class BrqChallengeApplication {
                     String nmMunicipio = scanner.nextLine();
                     System.out.println("Digite o estado. Exemplo: SP, MG, RJ:");
                     String estado = scanner.nextLine();
+
                     usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
-                            Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+                            Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado, documentos);
                     break;
                 case 2: // listar um usuário
                     System.out.println("Digite o ID do usuario: ");
@@ -156,6 +182,13 @@ public class BrqChallengeApplication {
                                     System.out.println("    Número do Telefone Comercial: [ " + telefone.getNrTelefone() + " ]");
                                     break;
                             }
+                        }
+                        for (Documento documento: usuario.get().getPessoa().getDocumentos()) {
+                            System.out.println("  Documento:");
+                            System.out.println("    Tipo do Documento: [ " + documento.getDsDocumento() + " ]");
+                            System.out.println("    Número do documento: [ " + documento.getNrDocumento() + " ]");
+                            System.out.println("    Órgão Expedidor do Documento: [ " + documento.getOrgaoExpedidor() + " ]");
+                            System.out.println("    data de Expedição do Documento: [ " + documento.getDtDataExpedicao() + " ]");
                         }
                         System.out.println("  Endereço: RESIDENCIAL");
                         System.out.println("    Tipo do Logradouro: [ " + usuario.get().getPessoa().getResidencial().getTipoLogradouro() + " ]");
@@ -197,6 +230,13 @@ public class BrqChallengeApplication {
                                         break;
                                 }
                             }
+                            for (Documento documento: usuarioCadastrado.getPessoa().getDocumentos()) {
+                                System.out.println("  Documento:");
+                                System.out.println("    Tipo do Documento: [ " + documento.getDsDocumento() + " ]");
+                                System.out.println("    Número do documento: [ " + documento.getNrDocumento() + " ]");
+                                System.out.println("    Órgão Expedidor do Documento: [ " + documento.getOrgaoExpedidor() + " ]");
+                                System.out.println("    data de Expedição do Documento: [ " + documento.getDtDataExpedicao() + " ]");
+                            }
                             System.out.println("  Endereço: RESIDENCIAL");
                             System.out.println("    Tipo do Logradouro: [ " + usuarioCadastrado.getPessoa().getResidencial().getTipoLogradouro() + " ]");
                             System.out.println("    Logradouro: [ " + usuarioCadastrado.getPessoa().getResidencial().getNmLogradouro() + " ]");
@@ -216,21 +256,6 @@ public class BrqChallengeApplication {
                     String idUsuarioRemover = scanner.nextLine();
                     usuarioBean.remover(Long.parseLong(idUsuarioRemover));
                     break;
-                /*
-                case 5: //editar um usuário
-                    System.out.println("Digite o ID do usuário que deseja editar: ");
-                    String idUsuarioEditar = scanner.nextLine();
-                    System.out.println("Digite o ID do usuário que deseja editar: ");
-                    String dsEmailEditar = scanner.nextLine();
-                    System.out.println("Digite o ID do usuário que deseja editar: ");
-                    String dsSenhaEditar = scanner.nextLine();
-                    System.out.println("Digite o ID do usuário que deseja editar: ");
-                    String nmPessoaEditar = scanner.nextLine();
-                    System.out.println("Digite o ID do usuário que deseja editar: ");
-                    String tipoPessoaEditar = scanner.nextLine();
-                    usuarioBean.editar(Long.parseLong(idUsuarioEditar), dsEmailEditar, dsSenhaEditar, nmPessoaEditar, tipoPessoaEditar);
-                    break;
-                 */
                 case 12: // listar um usuário
                     System.out.println("Digite o ID do marca: ");
                     String idMarca = scanner.nextLine();
@@ -289,9 +314,25 @@ public class BrqChallengeApplication {
         telefoneCel.setNrDdd("13");
         telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
         telefones.add(telefoneCel);
+        // Documento RG
+        List<Documento> documentos = new ArrayList<>();
+        Documento rg = new Documento();
+        rg.setNrDocumento("12345678");
+        rg.setOrgaoExpedidor("SECRETARIA DE SEGURANÇA PÚBLICA DE SP - SSP-SP");
+        rg.setDsDocumento("RG");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        rg.setDtDataExpedicao(LocalDate.parse("13/05/2019", formatter));
+        documentos.add(rg);
+        // documento CNH
+        Documento cnh = new Documento();
+        cnh.setNrDocumento("8811357445673214");
+        cnh.setOrgaoExpedidor("DETRAN");
+        cnh.setDsDocumento("CNH");
+        cnh.setDtDataExpedicao(LocalDate.parse("01/09/2022", formatter));
+        documentos.add(cnh);
 
         usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
-                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado, documentos);
 
 
         telefones.removeAll(telefones);
@@ -318,8 +359,21 @@ public class BrqChallengeApplication {
         telefoneCel.setNrDdd("12");
         telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
         telefones.add(telefoneCel);
+        // Documento RG
+        documentos.removeAll(documentos);
+        rg.setNrDocumento("98327125");
+        rg.setOrgaoExpedidor("SECRETARIA DE SEGURANÇA PÚBLICA DE SP - SSP-SP");
+        rg.setDsDocumento("RG");
+        rg.setDtDataExpedicao(LocalDate.parse("01/12/2022", formatter));
+        documentos.add(rg);
+        // documento CNH
+        cnh.setNrDocumento("35722711896");
+        cnh.setOrgaoExpedidor("DETRAN");
+        cnh.setDsDocumento("CNH");
+        cnh.setDtDataExpedicao(LocalDate.parse("28/03/2020", formatter));
+        documentos.add(cnh);
         usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
-                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado, documentos);
 
         telefones.removeAll(telefones);
         // Usuário ID: 3
@@ -345,8 +399,21 @@ public class BrqChallengeApplication {
         telefoneCel.setNrDdd("11");
         telefoneCel.setTipoTelefone(EnumTipoTelefone.CELULAR);
         telefones.add(telefoneCel);
+        // Documento RG
+        documentos.removeAll(documentos);
+        rg.setNrDocumento("12537234");
+        rg.setOrgaoExpedidor("SECRETARIA DE SEGURANÇA PÚBLICA DE SP - SSP-SP");
+        rg.setDsDocumento("RG");
+        rg.setDtDataExpedicao(LocalDate.parse("08/11/2015", formatter));
+        documentos.add(rg);
+        // documento CNH
+        cnh.setNrDocumento("236574324521");
+        cnh.setOrgaoExpedidor("DETRAN");
+        cnh.setDsDocumento("CNH");
+        cnh.setDtDataExpedicao(LocalDate.parse("21/10/20173", formatter));
+        documentos.add(cnh);
         usuarioBean.cadastrar(dsEmail, dsSenha, nmPessoa, tipoPessoa, telefones, nmLogradouro, tipoLogradouro,
-                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado);
+                Integer.parseInt(nrLogradouro), nmComplemento, nrCep, nmBairro, nmMunicipio, estado, documentos);
 
         // Marca ID: 1
         String dsMarca = "Fiat";

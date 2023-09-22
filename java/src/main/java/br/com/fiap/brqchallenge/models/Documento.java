@@ -1,5 +1,6 @@
 package br.com.fiap.brqchallenge.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class Documento extends AbstractModel {
 
     private String dsDocumento;
     private String nrDocumento;
-    private LocalDateTime dtDataExpedicao;
+    private LocalDate dtDataExpedicao;
     private String orgaoExpedidor;
 	private List<Arquivo> arquivos;
 
@@ -27,11 +28,11 @@ public class Documento extends AbstractModel {
 		this.nrDocumento = nrDocumento;
 	}
 
-	public LocalDateTime getDtDataExpedicao() {
+	public LocalDate getDtDataExpedicao() {
 		return dtDataExpedicao;
 	}
 
-	public void setDtDataExpedicao(LocalDateTime dtDataExpedicao) {
+	public void setDtDataExpedicao(LocalDate dtDataExpedicao) {
 		this.dtDataExpedicao = dtDataExpedicao;
 	}
 

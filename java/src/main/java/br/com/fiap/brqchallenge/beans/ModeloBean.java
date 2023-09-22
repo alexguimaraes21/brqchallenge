@@ -2,9 +2,8 @@ package br.com.fiap.brqchallenge.beans;
 
 import br.com.fiap.brqchallenge.enums.EnumCategoriaModeloVeiculo;
 import br.com.fiap.brqchallenge.enums.EnumTipoCombustivel;
-import br.com.fiap.brqchallenge.models.Acessorio;
-import br.com.fiap.brqchallenge.models.Marca;
-import br.com.fiap.brqchallenge.models.Modelo;
+import br.com.fiap.brqchallenge.enums.EnumTipoPessoa;
+import br.com.fiap.brqchallenge.models.*;
 import br.com.fiap.brqchallenge.repositories.AcessorioRepository;
 import br.com.fiap.brqchallenge.repositories.MarcaRepository;
 import br.com.fiap.brqchallenge.repositories.ModeloRepository;
@@ -57,11 +56,5 @@ public class ModeloBean {
 
     public List<Modelo> listarTodos() {
         return modeloRepository.buscarTodos();
-    }
-
-    public void editar(long id, String nmAcessorio, String dsAcessorio, double vlAcessorioHora, double vlAcessorioDiaria, double vlAcessorioMensal) {
-        Optional<Modelo> modelo = this.buscarPorId(id);
-        if (modelo.isPresent()) {
-        }
     }
 }

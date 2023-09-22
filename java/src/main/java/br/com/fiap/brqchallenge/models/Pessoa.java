@@ -11,6 +11,7 @@ public class Pessoa {
 	private EnumTipoPessoa tipoPessoa;
 	private List<Telefone> telefones;
 	private Endereco residencial;
+	private List<Documento> documentos;
 
 	public long getId() {
 		return id;
@@ -50,5 +51,13 @@ public class Pessoa {
 
 	public void setResidencial(Endereco residencial) {
 		this.residencial = residencial;
+	}
+
+	public List<Documento> getDocumentos() {
+		return documentos;
+	}
+
+	public void setDocumentos(List<Documento> documentos) {
+		this.documentos = documentos;
 	}
 }

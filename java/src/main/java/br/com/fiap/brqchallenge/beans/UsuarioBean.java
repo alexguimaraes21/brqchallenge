@@ -4,10 +4,7 @@ import br.com.fiap.brqchallenge.enums.EnumTipoEstado;
 import br.com.fiap.brqchallenge.enums.EnumTipoLogradouro;
 import br.com.fiap.brqchallenge.enums.EnumTipoPessoa;
 import br.com.fiap.brqchallenge.models.*;
-import br.com.fiap.brqchallenge.repositories.EnderecoRepository;
-import br.com.fiap.brqchallenge.repositories.PessoaRepository;
-import br.com.fiap.brqchallenge.repositories.TelefoneRepository;
-import br.com.fiap.brqchallenge.repositories.UsuarioRepository;
+import br.com.fiap.brqchallenge.repositories.*;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -20,6 +17,7 @@ public class UsuarioBean {
     PessoaRepository pessoaRepository;
     TelefoneRepository telefoneRepository;
     EnderecoRepository enderecoRepository;
+    DocumentoRepository documentoRepository;
 
     public UsuarioBean(UsuarioRepository repository) {
         this.usuarioRepository = repository;
@@ -44,14 +42,29 @@ public class UsuarioBean {
         this.enderecoRepository = enderecoRepository;
     }
 
+    public UsuarioBean(UsuarioRepository repository, PessoaRepository pessoaRepository, TelefoneRepository telefoneRepository,
+                       EnderecoRepository enderecoRepository, DocumentoRepository documentoRepository) {
+        this.usuarioRepository = repository;
+        this.pessoaRepository = pessoaRepository;
+        this.telefoneRepository = telefoneRepository;
+        this.enderecoRepository = enderecoRepository;
+        this.documentoRepository = documentoRepository;
+    }
+
     public void cadastrar(String dsEmail, String dsSenha, String nmPessoa, String tipoPessoa, List<Telefone> telefones,
                           String nmLogradouro, String tipoLogradouro, Integer nrLogradouro, String nmComplemento,
-                          String nrCep, String nmBairro, String nmMunicipio, String nmEstado) {
+                          String nrCep, String nmBairro, String nmMunicipio, String nmEstado, List<Documento> documentos) {
 
         // Telefones
         for (Telefone telefone : telefones) {
             this.telefoneRepository.cadastrar(telefone);
             telefone.setId(this.telefoneRepository.getId());
+        }
+
+        // Documentos
+        for (Documento documento : documentos) {
+            this.documentoRepository.cadastrar(documento);
+            documento.setId(this.documentoRepository.getId());
         }
 
         Endereco endereco = new Endereco();
@@ -72,6 +85,7 @@ public class UsuarioBean {
         pessoa.setTipoPessoa(EnumTipoPessoa.valueOf(tipoPessoa.toUpperCase()));
         pessoa.setTelefones(telefones);
         pessoa.setResidencial(endereco);
+        pessoa.setDocumentos(documentos);
         this.pessoaRepository.cadastrar(pessoa);
         pessoa.setId(this.pessoaRepository.getId());
 
