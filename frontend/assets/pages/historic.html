@@ -23,6 +23,7 @@
     <!-- PERSONAL CSS -->
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/historic.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
@@ -47,7 +48,6 @@
                                         Dashboard
                                     </a>
                                 </div>
-
                             </li>
 
                             <li class="nav-item my-2">
@@ -126,28 +126,192 @@
 
 
             <!-- VARIABLE CONTENT -->
-            <section class="content-block">
-                <h1> HISTÓRICO</h1>
-                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
+            <main class="content-block">
+                <div class="main-title">
+                    <h1>HISTÓRICO</h1>
+                    <button class="status-filter">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
+                </div>
+                
+
+                <!-- FILTER HEADER -->
+                <div class="filter-header">
+                    <button class="filter-button">
+                        <img src="../images/icons/icon-hashtag.svg" alt="calendar icon">
+                        Identificador
+                    </button>
+
+                    <button class="filter-button">
+                        <img src="../images/icons/icon-calendar-blue-2.svg" alt="calendar icon">
+                        Data
+                    </button>
+
+                    <button class="filter-button">
+                        <img src="../images/icons/icon-pin.svg" alt="calendar icon">
+                        Localização
+                    </button>
+
+                    <button class="h-search-button">
+                        Search
+                    </button>
                 </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
+                <!-- INFO CARD 01 -->
+                <article class="info-card-container">
+                    <div class="h-card-header">
+                        <div>
+                            <div class="h-id">
+                                ID #345789
+                            </div>
+                            <div class="progress-container">
+                                <div class="h-status h-concluded"></div>
+                                CONCLUÍDO
+                            </div>
+                        </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
+                        <div class="checked-active">
+                            <img src="../images/icons/icon-checked.svg" alt="checked icon">
+                            VISTORIADO
+                        </div>
+                    </div>
+                    <div class="h-profile">
+                        <img src="../images/generals/avatar-01.svg" alt="">
+                        Alex Ferreira de Paes
+                    </div>
+                    <section class="card-content">
+                        <div class="content-box">
+                            <div class="h-content-title"> Dados do aluguel </div>
+                            <div class="h-content">
+                                <div class="content-key">CNH:</div>
+                                <div class="content-value">24697513570</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">RG:</div>
+                                <div class="content-value">41.088.657-9</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">CPF:</div>
+                                <div class="content-value">334.567.882-02</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">Nascimento:</div>
+                                <div class="content-value">17/05/1989</div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-box">
+                            <div class="h-content-title"> Equipamentos Extras </div>
+                            <div class="content-value">Não há registros</div>
+                        </div>
+                        
+                        <div class="content-box">
+                            <div class="h-content-title"> Dados do veículo </div>
+                            <div class="content-value">Nissan Rogue</div>
+                            <div class="content-value">4 portas</div>
+                            <div class="content-value">5 assentos</div>
+                            <div class="content-value">Automático</div>
+                            <div class="content-value">Flex</div>
+                        </div>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
+                        <div class="content-box">
+                            <img src="../images/generals/car-nissan.svg" alt="">
+                        </div>
+                    </section>
+                    <div class="h-location">
+                        <div class="h-content">
+                            <div class="content-key">Localização</div>
+                            <div class="content-value">São Paulo</div>
+                        </div>
+                        <div class="h-content">
+                            <div class="content-key">De:</div>
+                            <div class="content-value">23/08/2023</div>
+                        </div>
+                        <div class="h-content">
+                            <div class="content-key">Até:</div>
+                            <div class="content-value">30/08/2023</div>
+                        </div>
+                    </div>
+                </article>
 
-                                <div>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque saepe, corporis voluptate nam omnis. Animi error est quae doloremque voluptatum. Laboriosam molestiae earum illum architecto rem! Dolorem libero beatae provident est explicabo ipsum incidunt commodi repudiandae, quod molestiae enim, vitae hic! Aliquid eligendi, voluptates hic at ab, iure commodi facilis, adipisci temporibus suscipit accusantium! Ea aspernatur impedit facilis corrupti. Labore optio quos distinctio sed pariatur nam laborum, numquam dolorem error rerum veritatis quia fugiat explicabo nostrum consequatur praesentium saepe, nisi adipisci nulla qui eveniet laboriosam facilis non harum! Commodi debitis quae distinctio adipisci fuga obcaecati hic magni at exercitationem!
-                </div>
-            </section>
+                <!-- INFO CARD 02 -->
+                <article class="info-card-container">
+                    <div class="h-card-header">
+                        <div>
+                            <div class="h-id">
+                                ID #578834
+                            </div>
+                            <div class="progress-container">
+                                <div class="h-status h-in-progress"></div>
+                                EM ANDAMENTO
+                            </div>
+                        </div>
+
+                        <div class="checked-inactive">
+                            <img src="../images/icons/icon-checked.svg" alt="checked icon">
+                            VISTORIADO
+                        </div>
+                    </div>
+                    <div class="h-profile">
+                        <img src="../images/generals/avatar-03.svg" alt="">
+                        Lucas Solano Martins
+                    </div>
+                    <section class="card-content">
+                        <div class="content-box">
+                            <div class="h-content-title"> Dados do aluguel </div>
+                            <div class="h-content">
+                                <div class="content-key">CNH:</div>
+                                <div class="content-value">33376908122</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">RG:</div>
+                                <div class="content-value">56.773.920-1</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">CPF:</div>
+                                <div class="content-value">089.114.453-07</div>
+                            </div>
+                            <div class="h-content">
+                                <div class="content-key">Nascimento:</div>
+                                <div class="content-value">27/07/1975</div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-box">
+                            <div class="h-content-title"> Equipamentos Extras </div>
+                            <div class="content-value">Caderinha de bebê</div>
+                            <div class="content-value">0-2 anos</div>
+                        </div>
+                        
+                        <div class="content-box">
+                            <div class="h-content-title"> Dados do veículo </div>
+                            <div class="content-value">Mercedes-Benz</div>
+                            <div class="content-value">E-class Specs</div>
+                            <div class="content-value">4 portas</div>
+                            <div class="content-value">5 assentos</div>
+                            <div class="content-value">Automático</div>
+                            <div class="content-value">Gasolina</div>
+                        </div>
+                        <div class="content-box">
+                            <img src="../images/generals/car-mercedes.svg" alt="">
+                        </div>
+                    </section>
+                    <div class="h-location">
+                        <div class="h-content">
+                            <div class="content-key">Localização</div>
+                            <div class="content-value">São Paulo</div>
+                        </div>
+                        <div class="h-content">
+                            <div class="content-key">De:</div>
+                            <div class="content-value">01/09/2023</div>
+                        </div>
+                        <div class="h-content">
+                            <div class="content-key">Até:</div>
+                            <div class="content-value">15/09/2023</div>
+                        </div>
+                    </div>
+                </article>
+            </main>
         </div>
     </div>
 

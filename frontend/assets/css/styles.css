@@ -23,6 +23,10 @@ body {
     background-color: rgb(238, 238, 238);
 }
 
+.main-title{
+    color: var(--ec-blue01);
+}
+
 .bg-blue {
     background-color: var(--ec-blue01);
     color: #fff;
