@@ -3,7 +3,9 @@ package br.com.fiap.brqchallenge.models;
 import br.com.fiap.brqchallenge.enums.EnumTipoEstado;
 import br.com.fiap.brqchallenge.enums.EnumTipoLogradouro;
 
-public class Endereco extends AbstractModel {
+public class Endereco {
+
+    private long id;
     private String nmLogradouro;
     private EnumTipoLogradouro tipoLogradouro;
     private Integer nrLogradouro;
@@ -12,6 +14,14 @@ public class Endereco extends AbstractModel {
     private String nmBairro;
     private String nmMunicipio;
     private EnumTipoEstado nmEstado;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getNmLogradouro() {
         return nmLogradouro;
