@@ -1,0 +1,164 @@
+
+/* -------------------------------------- GENERAL -------------------------------------- */
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-title button{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--ec-blue01);
+    display: flex;
+    align-items: end;
+}
+
+
+/* ----------------------------------- FILTER HEADER ----------------------------------- */
+.filter-header{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-button {
+    height: 4rem;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    color: #5e5e5e;
+    width: 100%;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filter-button img {
+    margin-right: .5rem;
+}
+
+.h-search-button {
+    height: 4rem;
+    border: none;
+    background-color: var(--ec-blue01);
+    border-radius: 4px;
+    color: #fff;
+    width: 100%;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ------------------------------------- INFO CARD ------------------------------------- */
+.info-card-container {
+    background-color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.h-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-id{
+    color: var(--ec-blue01);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-status {
+    height: 1rem;
+    width: 1rem;
+    border-radius: .5rem
+}
+
+.h-concluded {
+    background-color: #6ECE22;
+    margin-right: .5rem;
+}
+
+.h-in-progress {
+    background-color: #E9E231;
+    margin-right: .5rem;
+}
+
+.checked-active {
+    background-color: var(--ec-blue03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.checked-active img {
+    margin-right: .5rem;
+}
+
+.checked-inactive {
+    display: none;
+}
+
+.h-profile {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-block: 1rem;
+    font-size: 1.3rem;
+}
+
+.h-profile img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .7rem;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.contetn-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.h-content-title {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.h-content {
+    display: flex;
+}
+
+.content-key {
+    font-weight: 600;
+    margin-right: .4rem;
+}
+
+.h-location {
+    margin-top: 3rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}

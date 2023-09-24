@@ -12,6 +12,11 @@
     .db-ac-content{
         flex-direction: column;
     }
+
+/* ------------------------------------- HISTORIC ------------------------------------- */
+    .card-content {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
@@ -69,7 +74,30 @@
         margin-top: 2rem;
     }
 
+    /* ------------------------------------- HISTORIC ------------------------------------- */
+    .filter-header{
+        grid-template-columns:1fr 1fr;
+    }
+
 }
+
+@media (max-width: 770px) {
+    /* ------------------------------------- HISTORIC ------------------------------------- */
+    .card-content {
+        grid-template-columns: 1fr;
+    }
+
+    .checked-active {
+        padding: .3rem;
+        font-size: .7rem;
+    }
+
+    .content-box img {
+        max-width: 100%;
+    }
+    
+}
+
 
 
 @media (max-width: 440px) {
@@ -97,5 +125,11 @@
 
     .legend {
         font-size: .6rem;
+    }
+
+    /* ------------------------------------- HISTORIC ------------------------------------- */
+    .filter-header{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
