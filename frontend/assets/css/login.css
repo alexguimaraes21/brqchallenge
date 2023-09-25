@@ -5,7 +5,7 @@
     padding: 10px 0;
     border-radius: 0px 0px 20px 20px;
     box-shadow: 2px 0px 5px black;
-    background-color: #405066;
+    background-color: var(--blue-grey);
     color: white;
 }
 
@@ -92,7 +92,7 @@
 
 .left-content .div-network-icons i {
     cursor: pointer;
-    background: #405066;
+    background: var(--blue-grey);
     padding: 6px;
     border-radius: 100%;
     font-size: 12px;
@@ -152,7 +152,7 @@
     border-radius: 10px;
     background: #f5f5f5;
     border: none;
-    border-bottom: 2px solid #36b9a8;
+    border-bottom: 2px solid var(--ec-blue04);
     box-shadow: none !important;
 }
 
@@ -191,7 +191,7 @@
     border-radius: 10px;
     border: none;
     box-shadow: 1px 1px 9px rgb(161 161 161 / 50%);
-    background: #36b9a8;
+    background: var(--ec-blue04);
 }
 
 .right-content button a {
@@ -284,7 +284,7 @@ form i {
 
     .div-network-icons i {
         cursor: pointer;
-        background: #405066;
+        background: var(--blue-grey);
         padding: 6px;
         border-radius: 100%;
         font-size: 12px;

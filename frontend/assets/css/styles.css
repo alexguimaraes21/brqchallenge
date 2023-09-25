@@ -42,6 +42,12 @@ body {
     background-color: var(--ec-blue01);
 }
 
+.container {
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0;
+}
+
 
 /* --------------------------------- LEFT MENU --------------------------------- */
 .main-container {
