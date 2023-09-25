@@ -1,17 +1,31 @@
-
 /* -------------------------------------- GENERAL -------------------------------------- */
 
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-title button{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--ec-blue01);
+    display: flex;
+    align-items: end;
+}
 
 /* ----------------------------------- FILTER HEADER ----------------------------------- */
 
 .filter-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .filter-button {
+    height: 4rem;
     border: none;
     background-color: #F5F5F5;
     border-radius: 4px;
@@ -25,4 +39,115 @@
 
 .filter-button img {
     margin-right: .5rem;
+}
+
+.a-search-button {
+    height: 4rem;
+    border: none;
+    background-color: var(--ec-blue01);
+    border-radius: 4px;
+    color: #fff;
+    width: 100%;
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------------------------- INFO CARD ------------------------------------- */
+.info-card-container {
+    background-color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.a-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.a-id{
+    color: var(--ec-blue01);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.a-profile {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.a-profile p {
+    margin: 0 0 0 10px;
+}
+
+.a-content {
+    margin: 20px 0px;
+}
+
+.content-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.a-content {
+    display: flex;
+    align-items: center;
+}
+
+.graphic-analysis {
+    margin-right: 6%;
+}
+
+.extra-analysis .a-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extra-analysis .graphic-analysis {
+    margin: 0px 0px 16px 0px;
+}
+
+.info-analysis p {
+    margin: 0;
+}
+
+.graphic-analysis {
+    position: relative;
+    text-align: center;
+}
+
+.graphic-analysis p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: var(--ec-blue01);
+    font-weight: bold;
+}
+
+.font-color-blue-1 {
+    color: var(--ec-blue03);
+}
+
+.font-color-blue-2 {
+    color: var(--ec-blue02);
+}
+
+.a-content-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.a-content-image img {
+    width: 90%;
 }

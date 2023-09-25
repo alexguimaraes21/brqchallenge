@@ -95,7 +95,14 @@
     .content-box img {
         max-width: 100%;
     }
-    
+
+    .content-box-analysis {
+        display: block !important;
+    }
+
+    .a-content-image {
+        justify-content: center;
+    }
 }
 
 
