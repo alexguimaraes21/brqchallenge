@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1578B05E-A53A-7A0F-6081-CB436C817963" name="T_ACESSORIO">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:02:34 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_acessorio" id="60EA7A36-4C40-DA3F-8B7D-9E4735FB7DCE">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:02:40 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_acessorio" id="E8E59D57-0F49-E356-1640-8F3342D68F5F">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:02:50 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_acessorio_hora" id="E1A1B449-39C7-A71E-079D-B725334B3E5F">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:03:05 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_acessorio_diaria" id="FB9F231E-2261-1BCF-974E-0E1E58A9FF94">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:03:24 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_acessorio_mes" id="A6A19CEA-13DE-1922-8117-38EBB53D5EF0">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:03:45 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_cadastro" id="DDCFA31B-FB53-8C3C-A004-E224EA8F21EE">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:11:54 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_atualizacao" id="F6CB2EE1-6DB1-BDFC-F006-238FC1C7F030">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:12:37 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cadastrado_por" id="5EC7D068-19F1-06E5-18F0-042DE18B2282">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:14:39 UTC</createdTime>
+<generatorID>502C9D35-BB61-771C-8A2E-15D2DE3A4219</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="atualizado_por" id="FB8F38A2-C03A-06CB-DA55-93D79C723448">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:15:25 UTC</createdTime>
+<generatorID>A92B537D-AF19-9D78-327F-2A1C09483CC8</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2E3E1E6E-D062-F313-FB46-22469B3F9CFF" name="T_ACESSORIO PK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:02:46 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>60EA7A36-4C40-DA3F-8B7D-9E4735FB7DCE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0ABAB2D2-F709-8163-BE2D-9A9D550A6DF5" containerWithKeyObject="36DE75FA-2AB1-5613-727F-083F7CD0167B" localFKIndex="8F8DE05B-6A1F-F902-FC01-8438BC64F4EA" name="T_DOCUMENTO_T_ARQUIVO_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>01DE9F65-886D-73FF-6B91-DE97B143D396</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<referredTableLongName>T_ARQUIVO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>464FD958-B6C8-F80C-3748-55E410F7047E</referredTableID>
+<keyObject>05E821FA-E4D6-EBB3-42D4-3580716438E4</keyObject>
+<referredKeyID>05E821FA-E4D6-EBB3-42D4-3580716438E4</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>cd_arquivo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

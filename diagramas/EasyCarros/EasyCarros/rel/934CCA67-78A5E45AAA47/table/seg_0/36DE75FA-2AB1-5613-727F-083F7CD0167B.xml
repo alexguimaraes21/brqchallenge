@@ -1,0 +1,212 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36DE75FA-2AB1-5613-727F-083F7CD0167B" name="T_DOCUMENTO">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>DA4DA8EF-F222-B727-D12E-13D95A05CFDA</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_documento" id="8B8E5447-2A06-6866-024A-8C1B85154480">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>DF348C5F-BBA8-7763-D94D-DAA224FEAF88</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_documento" id="BECE8CD7-244F-5B3E-48FE-9FFFCC0CC314">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>377A7EFB-F62E-756C-3DA2-D51205CBD098</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_documento" id="BF36F9C2-FC13-B13F-98A4-847FA0C4D5C9">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>139FD19A-C4EB-5C3F-D721-D7CF97678727</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data_expedicao" id="D4C0768C-74C1-3E0B-224C-2629A5879885">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>B569546C-2B80-54F0-D487-ED2AE212B069</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_orgao_expedidor" id="7EC317ED-A217-8721-E0DC-2E796DB50AA6">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>FE495127-9AD2-AD75-04C9-BA955D732B21</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_PESSOA_cd_pessoa" id="0A68D5D7-6321-1A46-FF60-EEE49DF9BA2D">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>455B2994-D1FD-26A1-C07F-20B993A3D17F</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C0FE412-96C3-CF58-F95D-E0F182494253" referredColumn="48E981BF-44E2-CDE3-5E5C-80B13D052439"/>
+</associations>
+</Column>
+<Column name="T_ARQUIVO_cd_arquivo" id="5DD3AF7F-1A6F-6924-B6AE-C23677E21AF6">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>CADAD1D3-72AA-4A26-7161-BB23EEB525DA</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0ABAB2D2-F709-8163-BE2D-9A9D550A6DF5" referredColumn="2ABF8F6F-02D6-26E1-73ED-C436FCBF0377"/>
+</associations>
+</Column>
+<Column name="dt_hr_criacao" id="A88F0469-8004-4A11-D6FF-41397B37370B">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>723F1121-E7D6-58ED-E9D4-1B04CF1493F0</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_hr_atualizacao" id="69CC639D-68D2-2B7B-E0CE-0501398A7B87">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>85764EF5-307F-CFD3-0032-DCCF4D31DD2F</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario2" id="8D553E6A-D819-B2F5-F0B9-52183097E266">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>982DCE76-D539-047C-DAF5-FE48365B6A32</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59D6DE8D-28F8-A0A1-F4D6-F8C0BB8DF389" referredColumn="F86E69AC-5B19-459A-47E3-D0E4000A21F4"/>
+</associations>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="FD9FF32E-6A5F-A2B6-EADF-BF1D19DE899B">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>87B557F0-FDC5-F434-8C5D-DE8FA635B9E4</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75F49022-1414-EAA2-5BD3-8FFAA28DADAB" referredColumn="F86E69AC-5B19-459A-47E3-D0E4000A21F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A83AFF0-6942-4A78-5495-9DB42323A184" name="T_DOCUMENTO_PK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>8FEA6F5C-5DAB-60D6-CC39-770F44587475</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B8E5447-2A06-6866-024A-8C1B85154480"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9BD7E708-60C4-4A22-FC51-0F71B28C991C" name="T_DOCUMENTO_T_PESSOA_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>BC525F51-870E-F5C0-7638-B57239D33322</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A68D5D7-6321-1A46-FF60-EEE49DF9BA2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F8DE05B-6A1F-F902-FC01-8438BC64F4EA" name="T_DOCUMENTO_T_ARQUIVO_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>01DE9F65-886D-73FF-6B91-DE97B143D396</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DD3AF7F-1A6F-6924-B6AE-C23677E21AF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="535738D0-4E9D-AF8D-DE5D-77261CBF1D9C" name="T_DOCUMENTO_T_USUARIO_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>A335D331-561C-0AB6-D44C-3383935A400F</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD9FF32E-6A5F-A2B6-EADF-BF1D19DE899B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2D38C3A-E488-F30A-F1C1-939BAE565F73" name="T_DOCUMENTO_T_USUARIO_FKv2">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>797587B3-9179-FB5D-BCBA-15F127D8C7C7</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D553E6A-D819-B2F5-F0B9-52183097E266"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

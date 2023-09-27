@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0D2DBB34-9A26-79A2-6093-160EC1C6ADC0" containerWithKeyObject="4DB7FCD8-AA9D-155D-9BC8-A2823D740E75" localFKIndex="6AAB680F-D51C-B8BE-F24B-DC7FFBB7502F" name="T_ENDERECO_T_PESSOA_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:27:04 UTC</createdTime>
+<generatorID>D3AF4497-1C62-3256-7EF4-F8D290C8C604</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<referredTableLongName>T_PESSOA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A9213E67-87CB-CD82-D06C-F1ED6F1AB144</referredTableID>
+<keyObject>34B2DCCF-9862-39B4-1168-42CE9790133D</keyObject>
+<referredKeyID>34B2DCCF-9862-39B4-1168-42CE9790133D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_pessoa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

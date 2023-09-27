@@ -53,7 +53,7 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_quantidade_portas" id="02AA06FF-3701-1B38-A27A-DF7CDA308315">
+<Attribute name="nr_portas" id="02AA06FF-3701-1B38-A27A-DF7CDA308315">
 <createdBy>alex</createdBy>
 <createdTime>2023-05-17 23:55:05 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
@@ -131,15 +131,98 @@
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_plataforma" id="D3BFEEC2-7CCD-3E8B-3BA8-DC0A746E5AAC">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:05:44 UTC</createdTime>
-<generatorID>21D58076-90AF-C69E-3F28-937F05AB03DE</generatorID>
+<Attribute name="ds_categoria" id="9FF5F4DC-52CB-76A9-975F-EFA4D22EF9D9">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:42:19 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
 <item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
 </engineerTo>
-<referedAttribute>6BF8038B-42EC-244E-E5A2-28BF62555BE1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_combustivel" id="9AF5BDDF-73FA-A302-FABF-0D62754C5E9E">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:31:45 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_aluguel_hora" id="33B14AC5-251E-3CE3-3183-85C71850F9E4">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:32:02 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_aluguel_diaria" id="F358E244-2DBE-C0A9-CDF9-0FA74FDDFE7F">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:32:21 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_aluguel_mes" id="AE5F668B-C6C0-FA6D-E193-C3E872E353D1">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:32:46 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="criado_por" id="36AA97D1-B7E6-44F4-211A-7BFAAAD7B998">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:41:19 UTC</createdTime>
+<generatorID>931A3DC4-EC46-84BE-9813-EB355CDBE41E</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_usuario" id="C66B638B-7F6B-0387-3DEB-5C1F918E2574">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:42:51 UTC</createdTime>
+<generatorID>28863E45-C20D-FE81-C752-CCB811368202</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>

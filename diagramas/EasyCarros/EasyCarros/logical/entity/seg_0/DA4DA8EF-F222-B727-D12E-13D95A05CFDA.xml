@@ -62,22 +62,21 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_tipo_documento" id="1FDEF832-76C7-CDD9-E9A0-129A634F6D17">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-17 23:24:45 UTC</createdTime>
-<generatorID>4B3C9F3C-9A13-8E91-7888-769B36649610</generatorID>
+<Attribute name="ds_orgao_expedidor" id="FE495127-9AD2-AD75-04C9-BA955D732B21">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:08:05 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
 <item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
 </engineerTo>
-<referedAttribute>3BA5E94F-61AB-1201-4CA0-B35F2A1DDF92</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_pessoa" id="455B2994-D1FD-26A1-C07F-20B993A3D17F">
 <createdBy>alex</createdBy>
@@ -93,7 +92,7 @@
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_imagem" id="CADAD1D3-72AA-4A26-7161-BB23EEB525DA">
+<Attribute name="cd_arquivo" id="CADAD1D3-72AA-4A26-7161-BB23EEB525DA">
 <createdBy>alex</createdBy>
 <createdTime>2023-05-17 23:36:51 UTC</createdTime>
 <generatorID>01DE9F65-886D-73FF-6B91-DE97B143D396</generatorID>
@@ -103,6 +102,59 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>2D051AE7-EC1F-8952-6263-201A56D66CA6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_criacao" id="723F1121-E7D6-58ED-E9D4-1B04CF1493F0">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:22:52 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_atualizacao" id="85764EF5-307F-CFD3-0032-DCCF4D31DD2F">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:23:04 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="criado_por" id="982DCE76-D539-047C-DAF5-FE48365B6A32">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:23:28 UTC</createdTime>
+<generatorID>797587B3-9179-FB5D-BCBA-15F127D8C7C7</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="atualizado_por" id="87B557F0-FDC5-F434-8C5D-DE8FA635B9E4">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:24:47 UTC</createdTime>
+<generatorID>A335D331-561C-0AB6-D44C-3383935A400F</generatorID>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<referedAttribute>92276FC6-2EAF-D40C-1DF0-9047F193B9E7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>
@@ -119,6 +171,9 @@
 <item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="false"/>
 </engineerTo>
 <pk>true</pk>
+<usedAttributes>
+<attributeRef>DF348C5F-BBA8-7763-D94D-DAA224FEAF88</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

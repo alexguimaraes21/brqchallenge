@@ -4,7 +4,7 @@
 <createdTime>2023-05-18 00:06:44 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,31 +20,43 @@
 <createdTime>2023-05-18 00:06:55 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dt_data_hora_locacao" id="119F1AB9-8AB6-7E99-7436-6728953BABB0">
+<Attribute name="dt_hr_locacao" id="119F1AB9-8AB6-7E99-7436-6728953BABB0">
 <createdBy>alex</createdBy>
 <createdTime>2023-05-18 00:07:05 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dt_data_hora_devolucao" id="62D3BFFA-A939-B6B2-415F-0BE6B6E7CDD5">
+<Attribute name="dt_hr_retirada" id="C7BBBB4F-5F04-5F5E-3229-EF95CBA3C880">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:51:50 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_devolucao" id="62D3BFFA-A939-B6B2-415F-0BE6B6E7CDD5">
 <createdBy>alex</createdBy>
 <createdTime>2023-05-18 00:11:32 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,7 +68,7 @@
 <createdTime>2023-05-18 00:11:48 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -65,55 +77,40 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_tipo_locacao" id="63C64006-6CD5-F81D-8317-1D1D74E20AF3">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:14:28 UTC</createdTime>
-<generatorID>60D62A2D-661A-4BBE-63B8-9C0384B9A778</generatorID>
+<Attribute name="vl_desconto" id="0C9212DE-C4C6-4AED-E0AF-EB656F6BC2E2">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:52:56 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
-</engineerTo>
-<referedAttribute>A6F8BC18-D09F-FF96-46D9-B5A13D82700E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cd_forma_pagamento" id="3F8CBC28-A7E1-B024-4645-A1BC0D2FBF65">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:18:25 UTC</createdTime>
-<generatorID>08F80B1F-D78B-8E55-ACC8-00F9579B2464</generatorID>
-<ownerDesignName>EasyCarros</ownerDesignName>
-<engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
-</engineerTo>
-<referedAttribute>BE00AC38-22BE-AB03-A533-9B7DF72DE757</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cd_cartao" id="81FC4E28-A1CD-B6CE-967B-3DA0471CCB95">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:32:12 UTC</createdTime>
-<generatorID>1F093CD1-B43B-C358-D782-874E91E9442E</generatorID>
-<ownerDesignName>EasyCarros</ownerDesignName>
-<engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<referedAttribute>DCF5F726-13A2-D6A0-9017-E1854F8CE451</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo_pagamento" id="376CBB19-C857-85A3-62B1-A72F543BD3FD">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:55:34 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_cartao" id="4A7666C6-D752-66AC-F120-6D61C03241E1">
 <createdBy>alex</createdBy>
 <createdTime>2023-05-18 00:34:27 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -122,60 +119,33 @@
 <dataTypeSize>16</dataTypeSize>
 <ownDataTypeParameters>16,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_codigo_seguranca_cartao" id="00CD358F-2D3D-A595-4EA3-F46351AF7128">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:34:54 UTC</createdTime>
+<Attribute name="nm_bandeira_cartao" id="091CE045-E5EC-17E3-9625-9A779E2A1871">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:56:55 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>3 CHAR</dataTypeSize>
-<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="dt_data_vencimento_cartao" id="4F965E92-CE77-F490-F4D6-0620236E4DCB">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:35:22 UTC</createdTime>
-<ownerDesignName>EasyCarros</ownerDesignName>
-<engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nm_titular_cartao" id="94C4F9E7-99BF-0BB0-4BE9-F674FACCF525">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:35:40 UTC</createdTime>
-<ownerDesignName>EasyCarros</ownerDesignName>
-<engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100 CHAR</dataTypeSize>
-<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cpf_titular_cartao" id="B9495DCF-D680-55D7-BC0C-23F31EC96F81">
-<createdBy>alex</createdBy>
-<createdTime>2023-05-18 00:36:10 UTC</createdTime>
+<Attribute name="ds_tipo_cartao" id="577144D3-5FC3-DFF6-A3A2-68358D690AC8">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:58:09 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>11 CHAR</dataTypeSize>
-<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_modelo" id="AA3C97DD-B44B-0FBF-23E5-92C3630C5D23">
 <createdBy>alex</createdBy>
@@ -183,7 +153,7 @@
 <generatorID>25A9CF6E-5BC0-F166-B4F5-DE3DEF408710</generatorID>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <referedAttribute>35E83921-13B6-9A01-EA56-B922DD12CEEF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -197,7 +167,7 @@
 <generatorID>19394D0C-8BB9-4629-621D-BB7D8B227F6F</generatorID>
 <ownerDesignName>EasyCarros</ownerDesignName>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <referedAttribute>FB996CCB-811B-EE1B-521C-B41D0C54373D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -211,9 +181,8 @@
 <createdBy>alex</createdBy>
 <createdTime>2023-05-18 00:07:03 UTC</createdTime>
 <ownerDesignName>EasyCarros</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="false"/>
+<item key="934CCA67-BB35-4676-C029-78A5E45AAA47" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

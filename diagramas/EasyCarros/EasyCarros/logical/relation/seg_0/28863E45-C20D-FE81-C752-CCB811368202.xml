@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REL_T_USU_T_MOD_ATU" directorySegmentName="seg_0" id="28863E45-C20D-FE81-C752-CCB811368202">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-24 14:42:51 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E1CCB2C7-1DE8-9080-A7CF-B8BB9806093C" value="true"/>
+</engineerTo>
+<sourcePk>C5822C0F-0795-EA2C-F53A-28401E86B720</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4B4E3CD5-C95D-185D-3858-8B2A302A8841</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>923DF97F-96CC-80A5-F25A-4B6A4AC7CDFE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REL_ACESS_LOC_ACESS" directorySegmentName="seg_0" id="6FE58056-0D56-CA6E-9BCD-BC0D1825DCFF">
+<createdBy>Alex</createdBy>
+<createdTime>2023-09-27 06:23:01 UTC</createdTime>
+<ownerDesignName>EasyCarros</ownerDesignName>
+<engineerTo>
+<item key="E32B0B1E-C24F-9F84-1262-A4D0F36C014D" value="true"/>
+</engineerTo>
+<sourcePk>2E3E1E6E-D062-F313-FB46-22469B3F9CFF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1578B05E-A53A-7A0F-6081-CB436C817963</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8FF1BABC-273E-C995-66D4-E63B2AE0B62A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
